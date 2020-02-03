@@ -19,7 +19,7 @@ Ensemble model을 선택해야되는 일이 있어 참고용 논문을 읽은 �
 
 논문에서 앙상블 모델의 조합은 매우 간단하게하고 이 중에서 best 앙상블 모델을 선택하는데 통계적인 기법을 사용한다. 1번에서 설명한 것과 같은 방법으로 앙상블 모델을 선택하는데 이를 모든 경우에 대해 1000번씩 테스트한다. 아래에 나오는 Metric들을 통해 다각도에서 분석 후 최종적으로 모델을 선택한다.
 
-**2.1. Metrics**
+### **2.1. Metrics**
 
 * MAD\(Mean Absolute Deviation\): 평균 절대 편차. 다음과 같은 수식으로 정의된다.
 
@@ -41,7 +41,7 @@ Ensemble model을 선택해야되는 일이 있어 참고용 논문을 읽은 �
 
 ![](http://latex.codecogs.com/png.latex?\dpi{100}\bg_white%20RMSD=\sqrt{\frac{\sum_i{N}{%28\hat{x_i}-x_i%29}^2}{N}})
 
-**2.2. Figure & Table Analysis**
+### **2.2. Figure & Table Analysis**
 
 Figure와 Table 분석을 통해 앙상블 모델을 어떻게 선택하는지 설명하고 있다.
 
