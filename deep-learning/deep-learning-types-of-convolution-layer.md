@@ -49,7 +49,7 @@ Computational Cost
 
 Separable Conv Layer는 2개의 part로 나뉘며, 보통 이 2개의 layer를 합쳐서 separable conv layer로 사용한다.
 
-#### 4.1. Depth-wise\(Channel-wise\) Convolution Layer <a id="41-depth-wisechannel-wise-convolution-layer"></a>
+### 4.1. Depth-wise\(Channel-wise\) Convolution Layer
 
 ![](https://bgparkloop.github.io/assets/images/depth-conv.png)
 
@@ -57,7 +57,7 @@ Separable Conv Layer는 2개의 part로 나뉘며, 보통 이 2개의 layer를 �
 
 Computational Cost Depthwise Convolutional Layer : ![](http://latex.codecogs.com/png.latex?\dpi{100}\bg_white%20K^2%20CHW)
 
-**4.2. Point-wise Convolution Layer**
+### **4.2. Point-wise Convolution Layer**
 
 ![](https://bgparkloop.github.io/assets/images/point-conv.png)
 

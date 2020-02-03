@@ -12,35 +12,35 @@ Deep learning model은 학습을 필요로하는 parameter가 너무 많기 때�
 
 ## Image Augmentation 종류
 
-**1. Translation \(Shift\)**
+### **1. Translation \(Shift\)**
 
 의미 그대로 이미지 내에서 pixel을 shift한다. 또는 crop시에 특정 pixel만큼 shift하여 crop한다. 이렇게 하는 이유는 pixel이 1칸 이동되어 달라진 이미지라도 convolution하여 나온 feature map은 다르기 때문이다.
 
-**2. Flip**
+### **2. Flip**
 
 Horizontal Flip과 Vertical Flip 2종류가 있다. Horizontal의 경우 거울로 보는 것과 같이 상이 좌/우로 뒤바뀌게 하면되며, Vertical은 상/하로 뒤집으면 된다. 보통 랜덤 확률을 추출하여 0.5를 기준으로 Flip할지 안할지를 결정한다.
 
-**3. Rotation**
+### **3. Rotation**
 
 Translation과 마찬가지로 Rotation도 중요한 문제 중 하나이다. 사람의 눈에야 회전하든 이동이 되어있든 같게 보이지만 컴퓨터는 해당 위치의 데이터를 보기 때문에 회전 정보를 추가로 넣어주어야 잘 인식한다. 회전 각도는 풀고자하는 문제에 따라 0~180도까지 다양하다.
 
-**4. Zoom \(Scale\)**
+### **4. Zoom \(Scale\)**
 
 Zoom In/Out 둘다 필요한 문제이다. 학습에 사용된 데이터셋에서의 object 크기와 실제 적용하려는 Real data에서의 크기는 다를 수 있기 때문이다. 색상, 빛, 회전, 이동 등 나머지가 같더라도 크기가 달라지게 되면 인식하기 어렵다.
 
-**5. Brightness / Contrast**
+### **5. Brightness / Contrast**
 
 영상에서 밝기와 대조 또한 굉장히 중요한 issue중 하나이다. 예를 들어 X-ray사진과 같이 grayscale이미지의 경우 Brightness와 Contrast의 차이는 Color 이미지보다 극명하게 드러난다. 이에 대해 학습을 도와주면 학습 성능은 크게 차이날 것이다.
 
-**6. Normalization**
+### **6. Normalization**
 
 보통 Color 이미지에서 많이 사용되며, 일반적으로 데이터셋 전체에 대해 채널 별 평균/표준편차 값을 구하여 Input 이미지에 대해 계산된 평균값을 빼고 표준편차로 나누어 normalization을 수행한다.
 
-**7. CLAHE**
+### **7. CLAHE**
 
 Histogram equalization 방법 중 하나로 기존의 HE와 달리 전체 영역을 grid하게 나누어 각 영역 내에서 HE를 수행하여 Adaptive하게 적용한다. Chest-Xray와 같은 의료영상에 사용이 많이 된다.
 
-**8. Mixup / Cutout / CutMix**
+### **8. Mixup / Cutout / CutMix**
 
 ![](https://bgparkloop.github.io/assets/images/study/image-augmentation01.png)
 
@@ -50,7 +50,7 @@ Paper : [link](https://www.researchgate.net/publication/333078138_CutMix_Regular
   
 이 외에도 많은 방법들이 존재하고, 또 데이터마다 특색있는 Augmentation을 customization할 수 있을 것이다. Augmentation은 Deep learning학습에 있어 빠질 수 없는 부분이고 data별로 맞춤형이 필요하기 때문에 다양한 augmentation 기법을 알아놓고 그에 맞게 사용하는 연습이 필요할 것 같다.
 
-**9. Elastic Distortion**
+### **9. Elastic Distortion**
 
 기존의 Rotation, Shearing, Translation 등의 Affine 변형에 Probabilistic spin을 주어 떨림을 준 것과 같이 자연스러운 이미지 변형을 주는 방법이다. 일반적으로 Biomedical data에 많이 사용된다. Alpha와 Sigma라는 두 개의 파라미터를 사용하는데 일반적으로 Alpha와 Sigma를 10:1로 조합하면 자연스럽게 떨리는 이미지를 생성할 수 있다.
 

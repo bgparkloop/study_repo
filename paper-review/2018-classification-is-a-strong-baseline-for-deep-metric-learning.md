@@ -9,41 +9,41 @@ NCA와 마찬가지로 Classification 형태로 학습이 진행되고, 기존�
 
 논문에서는 크게 3가지에 대해 이야기하고 있으며, 전체적인 Flow는 아래와 같다.![](https://bgparkloop.github.io/assets/images/proxy_10.PNG)
 
-**2.1. Normalized Softmax Loss**
+### **2.1. Normalized Softmax Loss**
 
 저자들은 기존의 FC Layer에서 bias term을 없애고, Cosine similarity를 최적화해줄 L2 Normalization을 추가하였다. 또, Softmax 안에 Temperature scaling ![](http://latex.codecogs.com/png.latex?\dpi{100}\bg_white%20\sigma)를 두어 클래스들 간의 학습률의 차이를 boosting하는 방식을 사용하였다. 논문에서는 이 값을 0.05로 고정하였다. 이에 대해 정리된 수식은 다음과 같다.
 
 ![](http://latex.codecogs.com/png.latex?\dpi{100}\bg_white%20L_{Norm}%20=%20-\log%28\frac{\exp%28x^T%20p_y%20/%20\sigma%29}{%20\sum_{z\in{Z}}\exp%28x^T%20p_z%20/%20\sigma%29}%29)
 
-**2.2. Layer Normalization**
+### **2.2. Layer Normalization**
 
 Affine parameter가 없는 Layer Normalization을 Convolutional feature 바로 다음에 적용함으로써, embedding vector를 zero-centered로 만들어 0을 기준으로 binarize embedding하기 쉽게 만들어 주었다.
 
-**2.3. Class Balanced Sampling**
+### **2.3. Class Balanced Sampling**
 
 Scalability issue를 해결하기 위한 Mini-batch안에 최적의 class수를 정하도록 batch size 내에서 balance 있는 class sampling 방법을 제안하였다. 후에 실험 결과를 통해 class당 몇 장의 image를 mini-batch에 포함시켜야 최적의 학습효율이 나오는지 보여준다.
 
 ## 3. Experimental Results
 
-**3.1. Loss Function Comparison**
+### **3.1. Loss Function Comparison**
 
 ![](https://bgparkloop.github.io/assets/images/proxy_12.PNG)
 
 위 그림은 각 Loss function 별로 성능을 비교한 것이다. Loss Function 옆의 작은 숫자는 embedding vector의 크기를 나타낸 것이다. SOP, CARS-196 dataset에서는 NormSoftmax가 가장 뛰어난 성능을 보였으며, CUB-200에서도 1~2위를 다투는 좋은 성능을 보여준다. Table의 성능 비교를 통해 NormSoftmax가 학습 효율성이 좋은 Loss Function임이 증명된다.
 
-**3.2. Embedding Dimensionality**
+### **3.2. Embedding Dimensionality**
 
 ![](https://bgparkloop.github.io/assets/images/proxy_11.PNG)
 
 다음으로는 Embedding vector의 크기 및 정밀도\(float or binary\)에 따라 성능 차이를 비교하였다. 그래프에서 보듯 차원 크기가 커질수록 당연히 예상하게도\(?\) 성능이 좋아짐을 볼 수 있다. 그래프에서는 Float와 Binary의 2가지 정밀도도 비교를 하고 있는데 Float는 embedding vector를 Layer Normalization으로 zero-centered로 바꾼 뒤 그대로 사용한 것이고, Binary는 이 상태에서 0을 기준으로 threholding하여 각 dimension마다 0 또는 1의 binary형태로 변환한 것을 의미한다. 차원의 크기가 커질수록 2개의 성능은 유사해지긴 하지만, float 형태가 기본적으로 정보량이 더 풍부하기 때문에 성능의 우세함을 보인다. 메모리를 아끼려면 binary 형태로 사용하는 것도 고려해 볼만 하다.
 
-**3.3. Layer Normalization 유/무**
+### **3.3. Layer Normalization 유/무**
 
 ![](https://bgparkloop.github.io/assets/images/proxy_13.PNG)
 
 Layer Normalization의 유/무에 따라 Loss가 수렴하는 정도와 성능의 비교를 보여준다. 확실히 적용을 할 때가 수렴 속도, 최저값, 성능 모두 더 나은 것을 볼 수 있다.
 
-**3.4. Class Balanced Sampling 실험**
+### **3.4. Class Balanced Sampling 실험**
 
 ![](https://bgparkloop.github.io/assets/images/proxy_14.PNG)
 

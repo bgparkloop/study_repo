@@ -2,16 +2,16 @@
 
 ## 1. Tensorflow Object Detection API Installation
 
-**1.1. Tensorflow Models 다운로드**
+### **1.1. Tensorflow Models 다운로드**
 
 git을 사용해서 Tensorflow model API를 받는다. =&gt; git clone https://github.com/tensorflow/models
 
-**1.2. protobuffer 다운로드**
+### **1.2. protobuffer 다운로드**
 
 * Windows 아래 링크에서 필요로 하는 버전을 다운받는다. ex\) protoc-3.9.1-win32.zip 다운 받으면 압축파일 안에 zip파일이 있음 https://github.com/protocolbuffers/protobuf/releases/tag/v3.9.1
 * Linux 간단하게 아래 명령어로 설치 pip install protobuf
 
-**1.3. 필요 Library 설치**
+### **1.3. 필요 Library 설치**
 
 * pillow
 * lxml
@@ -19,7 +19,7 @@ git을 사용해서 Tensorflow model API를 받는다. =&gt; git clone https://g
 * matplotlib
 * 기타 등등..
 
-**1.4. models setup**
+### **1.4. models setup**
 
 git으로 받은 API폴더가 있는 곳으로 가면 models폴더가 있다. 그 안에 research 폴더로 이동 후,
 
@@ -31,7 +31,7 @@ git으로 받은 API폴더가 있는 곳으로 가면 models폴더가 있다. �
 * python setup.py build
 * python setup.py install
 
-**1.5. 환경변수 설정**
+### **1.5. 환경변수 설정**
 
 아래와 같이 models 폴더가 있는곳\(YOUR\_API\_PATH\)을 기준으로 2개의 경로를 환경변수로 설정
 
@@ -41,7 +41,7 @@ git으로 받은 API폴더가 있는 곳으로 가면 models폴더가 있다. �
 * Windows 환경변수 설정으로 가서 PATH에 추가한다.
 * Linux ~/.bashrc 파일에 export 환경변수를 추가하고, source ~/.bashrc로 적용. 또는 /etc/profile에 같은 방식으로 진행하면 모든 계정에 적용됨.
 
-**1.6. 동작확인**
+### **1.6. 동작확인**
 
 그대로 models/research 폴더에서 python object\_detection/builders/model\_builder\_test.py를 실행하여 아래와 같은 문장이 나오면 정상 동작.
 
@@ -49,7 +49,7 @@ git으로 받은 API폴더가 있는 곳으로 가면 models폴더가 있다. �
 
 ## 2. 학습 준비
 
-**2.1. Pretrained model 다운로드**
+### **2.1. Pretrained model 다운로드**
 
 아래 주소로 들어가 학습하고자 하는 모델을 다운받는다.
 
@@ -57,7 +57,7 @@ git으로 받은 API폴더가 있는 곳으로 가면 models폴더가 있다. �
 
 예시\) **‘ssd\_mobilenet\_v2\_coco’**를 받고 압축을 풀면 **‘ssd\_mobilenet\_v2\_coco\_2018\_03\_29’**와 같은 폴더에 다음과 같은 것들이 있다. 다른 것들은 크게 신경안써도 되고 pipline.config만 따로 옮겨주면 된다.
 
-**2.2. 데이터 준비**
+### **2.2. 데이터 준비**
 
 데이터를 넣어둘 폴더를 생성한다.
 
@@ -213,7 +213,7 @@ git으로 받은 API폴더가 있는 곳으로 가면 models폴더가 있다. �
         tf.app.run()
    ```
 
-**2.3. 설정 준비**
+### **2.3. 설정 준비**
 
 학습결과를 저장할 폴더를 생성한다.
 
@@ -287,7 +287,7 @@ git으로 받은 API폴더가 있는 곳으로 가면 models폴더가 있다. �
 
 ## 3. 학습 진행
 
-**3.1. Training**
+### **3.1. Training**
 
 이제 준비는 모두 끝났으니 본격적으로 학습을 진행한다. 아래와 같은 명령어를 입력하여 학습을 진행한다.
 
@@ -297,7 +297,7 @@ config파일에 지정한 설정대로 학습이 진행되고, training폴더에
 
 * tensorboard –logdir=./training
 
-**3.2. Evaluation**
+### **3.2. Evaluation**
 
 테스트를 진행하려면, training폴더안에 eval폴더를 만든 후 다음과 같이 명령어를 실행한다.
 
@@ -309,7 +309,7 @@ config파일에 지정한 설정대로 학습이 진행되고, training폴더에
 
 Mobile이나 임베디드 환경에서 사용하려면 경량화된 Model로 변경해야한다. Tensorflow API에서 제공하는 export\_tflite\_xxx\_graph.py와 같은 파일로 우리가 학습한 model을 tflite로 변경 가능하다. 하지만, 한 번에 변환되지 않고 ckpt -&gt; pb -&gt; tflite의 변환과정을 거친다.
 
-**4.1. pb파일로 변환**
+### **4.1. pb파일로 변환**
 
 아래는 ssdlite\_mobilenet에 대한 예제이다. 각자에서 적용할 때는 path부분들을 자신들의 환경에 맞게 변경해야한다. 명령어를 입력하면, tflite\_graph.pb와 tflite\_graph.pbtxt파일이 생성된다.
 
@@ -321,7 +321,7 @@ python export_tflite_ssd_graph.py \
 --add_postprocessing_op=true
 ```
 
-**4.2. pb파일을 tflite파일로 변환**
+### **4.2. pb파일을 tflite파일로 변환**
 
 변환된 pb파일을 tflite로 변환하기위해서는 bazel설치가 필요하다. Windows에서 설치는 검색하면 나오므로… Linux 기준으로
 
