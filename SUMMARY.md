@@ -4,11 +4,16 @@
 
 ## \[PAPER REVIEW\]
 
+* [\(2017\) No Fuss Distance Metric Learning using Proxies](paper-review/2017-no-fuss-distance-metric-learning-using-proxies.md)
 * [\(2017\) RSNA Bone Age Ensemble Model](paper-review/2017-rsna-bone-age-ensemble-model.md)
+* [\(2018\) Classification is a Strong Baseline for Deep Metric Learning](paper-review/2018-classification-is-a-strong-baseline-for-deep-metric-learning.md)
 
-## \[DEEP LEARNING\]
+## \[MACHINE LEARNING\] <a id="deep-learning"></a>
 
-* [Untitled](deep-learning/untitled.md)
+* [Metric Learning Introduction](deep-learning/metric-learning-introduction.md)
+* [Deep Learning: Image Augmentation](deep-learning/untitled.md)
+* [Object Detection: Tensorflow API 사용법](deep-learning/object-detection-tensorflow-api.md)
+* [Deep Learning: Types of Convolution Layer](deep-learning/deep-learning-types-of-convolution-layer.md)
 
 ## \[COMPUTER VISION\]
 
@@ -17,6 +22,10 @@
 ## \[MEDICAL IMAGING\]
 
 * [Untitled](medical-imaging/untitled.md)
+
+## \[MOBILE APP\]
+
+* [Flutter: Installation](mobile-app/flutter-installation.md)
 
 ## \[COFFEE\]
 
