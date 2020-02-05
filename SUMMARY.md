@@ -33,3 +33,7 @@
 
 * [Untitled](coffee/untitled.md)
 
+## \[Side Projects\]
+
+* [Style Learning in Mobile](side-projects/style-learning-in-mobile.md)
+
