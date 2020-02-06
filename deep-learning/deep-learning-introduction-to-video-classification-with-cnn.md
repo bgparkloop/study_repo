@@ -8,7 +8,11 @@ CNN과 같은 Deep learning이 활성화되기 전에는 Bag-of-Words 개념을 
 
 다른 Task들에서도 Dataset에 대한 이해는 매우 중요한데, Video의 경우 Text나 Image 들보다 월등히 많은 용량을 차지하고 영상의 길이도 제각각이어서 입력값으로써 표준화하는 작업도 중요하다.
 
-## 2. 
+## 2. Time Information Fusion
+
+asas
+
+![](../.gitbook/assets/1_zoqwsegwl0ieytk62bfina.png)
 
 
 
