@@ -17,6 +17,7 @@
 * [Object Detection: Tensorflow API 사용법](deep-learning/object-detection-tensorflow-api.md)
 * [Deep Learning: Types of Convolution Layer](deep-learning/deep-learning-types-of-convolution-layer.md)
 * [\(작성중\) Video Segmentation Introduction](deep-learning/video-segmentation-introduction.md)
+* [Deep Learning: Introduction to Video Classification with CNN](deep-learning/deep-learning-introduction-to-video-classification-with-cnn.md)
 * [\(작성중\) Ensemble Learning](deep-learning/ensemble-learning.md)
 
 ## \[COMPUTER VISION\]
