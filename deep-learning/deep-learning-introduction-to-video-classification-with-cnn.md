@@ -10,16 +10,31 @@ CNN과 같은 Deep learning이 활성화되기 전에는 Bag-of-Words 개념을 
 
 ## 2. Time Information Fusion
 
-asas
+기본 CNN은 단일 Image\(예 - 224x224x3 input tensor\)만 입력으로 들어가는데, Video에서는 아래와 같은 다양한 방식으로 CNN 입력 구조를 변경하여 시간정보를 더할 수 있다.
 
 ![](../.gitbook/assets/1_zoqwsegwl0ieytk62bfina.png)
 
+1\) Single Frame : 단일 Frame 정보를 CNN의 입력으로 사용한다. 기본 CNN을 그대로 사용하는 것과 같다.
+
+2\) Late Fusion : 단일 Clip\(30fps면 30 frame을 의미하는 듯\)에서 처음과 끝 부분의 frame을 이용하는 방법.
+
+3\) Early Fusion : 단일 Clip에서 가장 큰 연속 Segment\(대충 동일 object가 연속으로 등장하는 Scene등을 의미하는 듯 함.\)를 입력으로 사용.
+
+4\) Slow Fusion : 4개의 서로 다른 연속 Segment를 Overlap하여 입력으로 사용.
+
+여기서 소개된 방법들은 참조된 논문에서의 방법이며, 이 외에도 현재 frame 기준 앞, 뒤 N frame들을 이어 붙여 사용하는 방법 등 다양한 방법이 존재한다.
+
+## 3. Multi-Resolution Information
 
 
 
+![](../.gitbook/assets/1_rfxk8rd1et3ksphy-wtxpg.png)
 
-References
+## References
 
 * [https://towardsdatascience.com/introduction-to-video-classification-6c6acbc57356](https://towardsdatascience.com/introduction-to-video-classification-6c6acbc57356)
 * [https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42455.pdf](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42455.pdf)
-
+* [https://cs.stanford.edu/people/karpathy/deepvideo/](https://cs.stanford.edu/people/karpathy/deepvideo/)
+* [https://www.crcv.ucf.edu/data/UCF101.php](https://www.crcv.ucf.edu/data/UCF101.php)
+* [https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42455.pdf](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42455.pdf)
+* 
