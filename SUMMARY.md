@@ -8,6 +8,7 @@
 * [\(2017\) RSNA Bone Age Ensemble Model](paper-review/2017-rsna-bone-age-ensemble-model.md)
 * [\(2018\) Classification is a Strong Baseline for Deep Metric Learning](paper-review/2018-classification-is-a-strong-baseline-for-deep-metric-learning.md)
 * [\(작성중\) \(2019\) CNN for Action Detection and Segmentation in Videos](paper-review/2019-cnn-for-action-detection-and-segmentation-in-videos.md)
+* [\(작성중\) \(2019\) Data augmentation for Pathology](paper-review/2019-data-augmentation-for-pathology.md)
 
 ## \[MACHINE LEARNING\] <a id="deep-learning"></a>
 
