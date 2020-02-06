@@ -1,4 +1,4 @@
-# Deep Learning: Introduction to Video Classification with CNN
+# \(작성중\) Deep Learning: Introduction to Video Classification with CNN
 
 ## 1. Introduction
 
