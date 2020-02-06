@@ -30,11 +30,11 @@
 
 * [Flutter: Installation](mobile-app/flutter-installation.md)
 
-## \[COFFEE\]
-
-* [Untitled](coffee/untitled.md)
-
 ## \[Side Projects\]
 
 * [Style Learning in Mobile](side-projects/style-learning-in-mobile.md)
+
+## \[COFFEE\]
+
+* [Untitled](coffee/untitled.md)
 
