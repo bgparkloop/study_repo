@@ -36,7 +36,8 @@
 
 ## \[MOBILE APP\]
 
-* [Flutter: Installation](mobile-app/flutter-installation.md)
+* [Flutter Summary](mobile-app/flutter-summary/README.md)
+  * [Flutter: Installation](mobile-app/flutter-summary/flutter-installation.md)
 
 ## \[ALGORITHM\]
 
