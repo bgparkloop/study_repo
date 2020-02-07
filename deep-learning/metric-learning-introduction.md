@@ -71,4 +71,6 @@ Github : [https://github.com/dichotomies/proxy-nca](https://github.com/dichotomi
 1. [https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d](https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d)
 2. [https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24](https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24)
 3. [https://github.com/ColumbiaDVMM/Heated\_Up\_Softmax\_Embedding](https://github.com/ColumbiaDVMM/Heated_Up_Softmax_Embedding)
+4. [https://blog.goodaudience.com/training-a-speaker-embedding-from-scratch-24baf990ccf](https://blog.goodaudience.com/training-a-speaker-embedding-from-scratch-24baf990ccf)
+5. [https://norman3.github.io/papers/docs/deepimgir.html](https://norman3.github.io/papers/docs/deepimgir.html)
 
