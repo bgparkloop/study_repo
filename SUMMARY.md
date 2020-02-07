@@ -20,6 +20,9 @@
 * [\(작성중\) Deep Learning: Introduction to Video Classification with CNN](deep-learning/deep-learning-introduction-to-video-classification-with-cnn.md)
 * [\(작성중\) Deep Learning: Style Learning](deep-learning/deep-learning-style-learning.md)
 * [\(작성중\) Ensemble Learning](deep-learning/ensemble-learning.md)
+* [Introduction to Machine Learning](deep-learning/introduction-to-machine-learning/README.md)
+  * [Introduction to Machine Learning \(1\)](deep-learning/introduction-to-machine-learning/introduction-to-machine-learning-1.md)
+  * [Introduction to Machine Learning \(2\)](deep-learning/introduction-to-machine-learning/introduction-to-machine-learning-2.md)
 
 ## \[COMPUTER VISION\]
 
