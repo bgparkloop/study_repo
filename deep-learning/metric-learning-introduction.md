@@ -66,3 +66,9 @@ Triplet Network 학습에 있어서 Pair의 Selection은 매우 중요하다. �
 Paper : [https://arxiv.org/pdf/1703.07464.pdf](https://arxiv.org/pdf/1703.07464.pdf)  
 Github : [https://github.com/dichotomies/proxy-nca](https://github.com/dichotomies/proxy-nca)
 
+## References\(그 외 참고용 링크들\)
+
+1. [https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d](https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d)
+2. [https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24](https://towardsdatascience.com/lossless-triplet-loss-7e932f990b24)
+3. [https://github.com/ColumbiaDVMM/Heated\_Up\_Softmax\_Embedding](https://github.com/ColumbiaDVMM/Heated_Up_Softmax_Embedding)
+
