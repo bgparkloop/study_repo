@@ -23,6 +23,8 @@
 * [Introduction to Machine Learning](deep-learning/introduction-to-machine-learning/README.md)
   * [Introduction to Machine Learning \(1\)](deep-learning/introduction-to-machine-learning/introduction-to-machine-learning-1.md)
   * [Introduction to Machine Learning \(2\)](deep-learning/introduction-to-machine-learning/introduction-to-machine-learning-2.md)
+  * [Introduction to Machine Learning \(3\)](deep-learning/introduction-to-machine-learning/introduction-to-machine-learning-3.md)
+  * [Introduction to Machine Learning \(4\)](deep-learning/introduction-to-machine-learning/introduction-to-machine-learning-4.md)
 
 ## \[COMPUTER VISION\]
 
