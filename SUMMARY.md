@@ -43,6 +43,10 @@
 
 * [알고리즘 사이트 정리](algorithm/undefined.md)
 
+## \[PYTHON\]
+
+* [사이트 정리](python/undefined.md)
+
 ## \[Side Projects\]
 
 * [Style Learning in Mobile](side-projects/style-learning-in-mobile.md)

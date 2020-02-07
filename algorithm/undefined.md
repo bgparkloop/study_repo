@@ -9,4 +9,15 @@
   * [https://www.leafcats.com/72](https://www.leafcats.com/72)
   * [http://blog.naver.com/PostView.nhn?blogId=kks227&logNo=220776241154&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView](http://blog.naver.com/PostView.nhn?blogId=kks227&logNo=220776241154&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView)
 * 조합 알고리즘 : [https://gorakgarak.tistory.com/523](https://gorakgarak.tistory.com/523)
-* 
+* string similarity : [https://github.com/luozhouyang/python-string-similarity](https://github.com/luozhouyang/python-string-similarity)
+* 이분탐색 : [http://blog.naver.com/PostView.nhn?blogId=kks227&logNo=220777333252&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView](http://blog.naver.com/PostView.nhn?blogId=kks227&logNo=220777333252&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView)
+* [https://ehclub.co.kr/1930](https://ehclub.co.kr/1930)
+* [https://bab2min.tistory.com/601](https://bab2min.tistory.com/601)
+* [https://www.codeproject.com/Articles/5425/An-In-Depth-Study-of-the-STL-Deque-Container](https://www.codeproject.com/Articles/5425/An-In-Depth-Study-of-the-STL-Deque-Container)
+* [http://mip.hannam.ac.kr/courses/network/lab/combination.html](http://mip.hannam.ac.kr/courses/network/lab/combination.html)
+* 프로그래밍 문제
+* * [https://www.acmicpc.net/workbook/view/1152](https://www.acmicpc.net/workbook/view/1152)
+  * [https://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/](https://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/)
+
+
+
