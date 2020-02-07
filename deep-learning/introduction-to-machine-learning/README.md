@@ -11,7 +11,10 @@ Machine Learning 및 Deep Learning 기본 지식들 정리
 Concepts
 
 * [http://cs231n.stanford.edu/](http://cs231n.stanford.edu/)
-* 
+* [http://solarisailab.com/archives/113](http://solarisailab.com/archives/113)
+* [https://wikidocs.net/3413](https://wikidocs.net/3413)
+* [http://jaynewho.com/post/9](http://jaynewho.com/post/9)
+
 Models
 
 * [http://cs231n.github.io/linear-classify/\#softmax](http://cs231n.github.io/linear-classify/#softmax)
