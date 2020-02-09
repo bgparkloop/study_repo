@@ -12,7 +12,7 @@ CNN과 같은 Deep learning이 활성화되기 전에는 Bag-of-Words 개념을 
 
 기본 CNN은 단일 Image\(예 - 224x224x3 input tensor\)만 입력으로 들어가는데, Video에서는 아래와 같은 다양한 방식으로 CNN 입력 구조를 변경하여 시간정보를 더할 수 있다.
 
-![](../.gitbook/assets/1_zoqwsegwl0ieytk62bfina.png)
+![](../../.gitbook/assets/1_zoqwsegwl0ieytk62bfina.png)
 
 1\) Single Frame : 단일 Frame 정보를 CNN의 입력으로 사용한다. 기본 CNN을 그대로 사용하는 것과 같다.
 
@@ -28,7 +28,7 @@ CNN과 같은 Deep learning이 활성화되기 전에는 Bag-of-Words 개념을 
 
 기존의 Image Task에서도 다양한 Object들\(크기, 종류\)에 대한 학습을 할 때, Multi-Resolution에 대해 정보를 줄 수 있는 여러 방법을 사용한다. 그 중 한 가지로 전체 Image와 그 Image의 일부를 Crop하여 Multi Input을 이용하는 법이 있다.
 
-![](../.gitbook/assets/1_rfxk8rd1et3ksphy-wtxpg.png)
+![](../../.gitbook/assets/1_rfxk8rd1et3ksphy-wtxpg.png)
 
 예를 들면, 
 
