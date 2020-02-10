@@ -1,4 +1,4 @@
-# \(작성중\) Deep Learning: Introduction to Video Classification with CNN
+# Deep Learning: Introduction to Video Classification with CNN
 
 ## 1. Introduction
 
@@ -30,7 +30,13 @@ CNN과 같은 Deep learning이 활성화되기 전에는 Bag-of-Words 개념을 
 
 ![](../../.gitbook/assets/1_rfxk8rd1et3ksphy-wtxpg.png)
 
-예를 들면, 
+예를 들면, 위 그림처럼 전체 이미지를 하나의 입력으로 받고, 또 다른 입력으로는 이미지 중심 일부분을 잘라내어 사용한다. 이런 입력 방식은 Multi-resolution 학습을 할 때, cost도 줄여주면서 학습 시간 또한 줄여준다.
+
+## 4. Transfer Learning in Video Classification
+
+Transfer Learning은 매우 큰 데이터셋\(예 - ImageNet\)에서 학습한 모델을 다른 도메인 또는 더 작은 데이터셋에 적용하기 위한 학습 방법이다. 이런 학습 방법은 적용하고자 하는 데이터셋으로 바로 학습하는 것보다 효율적인 학습이 가능하고 성능도 좀 더 좋다.
+
+Video Classification에서도 Youtube-1M dataset과 같은 커다란 데이터셋에서 Video에서 사용되는 Feature를 선행 학습 후, UCF-101과 같은 작은 데이터셋에 transfer learning을 수행한다. Fine-tuning 시, 어디까지 freeze\(학습하지 않게 하는 것\) 해놓고 하는지에 따라 성능차이가 갈린다. 일반적으로 유사한 데이터셋의 겨우 Top-1~3 정도\(보통 Fully connected layer\)를 freeze 해놓고 학습하는게 가장 성능이 좋다.
 
 ## References
 
@@ -39,4 +45,4 @@ CNN과 같은 Deep learning이 활성화되기 전에는 Bag-of-Words 개념을 
 * [https://cs.stanford.edu/people/karpathy/deepvideo/](https://cs.stanford.edu/people/karpathy/deepvideo/)
 * [https://www.crcv.ucf.edu/data/UCF101.php](https://www.crcv.ucf.edu/data/UCF101.php)
 * [https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42455.pdf](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42455.pdf)
-* 
+
