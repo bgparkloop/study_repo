@@ -68,9 +68,42 @@ description: >-
 
 ## 3. Methods
 
+다음과 같은 기법들을 적용하여 학습을 진행함.
 
+### 3.1. Stain Color Augmentation
+
+![](../../.gitbook/assets/screenshot-from-2020-02-10-11-38-46.png)
+
+* Basic
+  * 90 degree rotations
+  * Vertical/Horizontal Mirroring
+* Morphology \(extended basic\)
+  * Scaling
+  * Elastic deformation
+  * Additive Gaussian noise
+  * Gaussian blurring
+* Brightness & contrast \(BC - extended Morphology\)
+  * Random brightness / contrast perturbations
+* Hue-Saturation-Value \(HSV - extended BC\)
+  * Random shifting Hue & Saturation
+* Hematoxylin-Eosin-DAB \(HED - extended BC\)
+  * 3 steps
+    * Hematoxylin과 Eosin color channel을 Fixed matrix를 사용한 Color deconvolution의 평균으로 분리
+    * H와 E를 독립적으로 perturbation
+    * RGB color space로 재변
+
+### 3.2. Stain Color Normalization
+
+Trainset과 Testset 간의 Color variation을 줄이는 방법. 아래와 같은 방법들로 진행된다.
+
+* Identity : 변화 없이 그대로 사용.
+* Grayscale : RGB 이미지를 흑백 영상으로 변환. H&E Color 정보가 대부분 사라지고, Shape이나 Texture 등의 정보만 남는다.
+* LUT-based : Look Up Table에 Target WSI의 color 정보를 담아 Normalization을 수행.
+* Network-based : U-Net을 End-to-end으로 Color distribution을 변환하는 모델을 학습.
 
 ## 4. Experimental Results
+
+
 
 ## 5. Conclusion
 
