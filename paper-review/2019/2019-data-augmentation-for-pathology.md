@@ -94,6 +94,8 @@ description: >-
 
 ### 3.2. Stain Color Normalization
 
+![](../../.gitbook/assets/screenshot-from-2020-02-10-11-47-14.png)
+
 Trainset과 Testset 간의 Color variation을 줄이는 방법. 아래와 같은 방법들로 진행된다.
 
 * Identity : 변화 없이 그대로 사용.
@@ -101,9 +103,13 @@ Trainset과 Testset 간의 Color variation을 줄이는 방법. 아래와 같은
 * LUT-based : Look Up Table에 Target WSI의 color 정보를 담아 Normalization을 수행.
 * Network-based : U-Net을 End-to-end으로 Color distribution을 변환하는 모델을 학습.
 
+![](../../.gitbook/assets/screenshot-from-2020-02-10-11-47-24.png)
+
 ## 4. Experimental Results
 
 
+
+![](../../.gitbook/assets/screenshot-from-2020-02-10-11-48-30.png)
 
 ## 5. Conclusion
 
