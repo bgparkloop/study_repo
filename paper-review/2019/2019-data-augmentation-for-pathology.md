@@ -105,13 +105,16 @@ Trainset과 Testset 간의 Color variation을 줄이는 방법. 아래와 같은
 
 ![](../../.gitbook/assets/screenshot-from-2020-02-10-11-47-24.png)
 
-## 4. Experimental Results
+## 4. Experimental Results & Conclusion
 
+저자들은 Normalization과 Augmentation 방법을 조합하여 각 center에서 얻은 데이터에 실험한 결과로 종합 순위를 매김. center별 순위의 평균을 Ranking 항목에 오름차순으로 정렬.
 
+* 가장 좋은 성적을 보인 것은 Network-based Normalization과 HSV-light Augmentation 조합임.
+* Color Augmentation 관점에서는 HSV, HED가 포함되어야 좋은 성능을 보임.
+* Color Normalization 관점에서는 Network-basd가 가장 좋은 성능을 보였으며, 아무것도 하지 않은 것이 그 다음으로 좋았음.\(어정쩡한 Normalization 보다는 확실하게 Normalization을 해주어야 좋은 성능을 보이는 것 같음\)
+* 적절한 data augmentation은 적용하지 않는 것보다 noisy함을 줄여주고, overfitting과 generalization error를 줄여주는 효과가 있음.
 
 ![](../../.gitbook/assets/screenshot-from-2020-02-10-11-48-30.png)
-
-## 5. Conclusion
 
 Link : [https://arxiv.org/pdf/1902.06543.pdf](https://arxiv.org/pdf/1902.06543.pdf)
 
