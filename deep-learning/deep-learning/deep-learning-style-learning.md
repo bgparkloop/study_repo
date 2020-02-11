@@ -30,7 +30,9 @@ Style transfer learning은 두 가지의 입력 이미지\(Content & Style\)가 
   * Target : 적용하고자 하는 Style을 적용한 Content 이미지
     * Random Noise, Content Image, Style Image 중 1개를 선택
     * Gradient update 있음 \(Content + Style Image로 변환이 진행되어야 하기 때문\)
-* 
+* Gram Matrix : Style Representation Feature 추출을 위해 각 Layer마다 추출된 Feature끼리 gram matrix를 이용하여 correlation을 계산한다. 이렇게 얻어진 multi-layer 간 correlation은 stationary하고 multi-scale을 아우르는 feature가 된다.
+* L-BFGS : 
+
 
 
 ## References
