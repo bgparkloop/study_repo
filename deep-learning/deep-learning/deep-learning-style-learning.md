@@ -30,8 +30,11 @@ Style transfer learning은 두 가지의 입력 이미지\(Content & Style\)가 
   * Target : 적용하고자 하는 Style을 적용한 Content 이미지
     * Random Noise, Content Image, Style Image 중 1개를 선택
     * Gradient update 있음 \(Content + Style Image로 변환이 진행되어야 하기 때문\)
+  * Initialization : Content나 Style 이미지로 초기화하면, 항상 같은 Output만 나옴. 하지만, White noise로 초기화하면 매 번 새로운 이미지 생성. \(Output의 퀄리티는 거의 차이가 없음\)
 * Gram Matrix : Style Representation Feature 추출을 위해 각 Layer마다 추출된 Feature끼리 gram matrix를 이용하여 correlation을 계산한다. 이렇게 얻어진 multi-layer 간 correlation은 stationary하고 multi-scale을 아우르는 feature가 된다.
-* L-BFGS : 
+* L-BFGS \(Limited-memory BFGS\) : Quasi-Newton 방법 중 하나로 복잡한 Hessian Matrix 연산이 들어가는 optimization에서 유용함.
+
+
 
 
 
@@ -43,4 +46,6 @@ Style transfer learning은 두 가지의 입력 이미지\(Content & Style\)가 
 * [https://datascience-enthusiast.com/DL/Art\_Generation\_with\_Neural\_Style\_Transfer\_v2.html](https://datascience-enthusiast.com/DL/Art_Generation_with_Neural_Style_Transfer_v2.html)
 * [https://seongkyun.github.io/papers/2019/11/13/style\_transfer/](https://seongkyun.github.io/papers/2019/11/13/style_transfer/)
 * [https://www.cv-foundation.org/openaccess/content\_cvpr\_2016/papers/Gatys\_Image\_Style\_Transfer\_CVPR\_2016\_paper.pdf](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)
+* [https://github.com/cysmith/neural-style-tf/blob/a2c374f9ee2938f0022e1e0b720f4eb28cf7d0a8/neural\_style.py\#L406](https://github.com/cysmith/neural-style-tf/blob/a2c374f9ee2938f0022e1e0b720f4eb28cf7d0a8/neural_style.py#L406)
+* [https://github.com/leongatys/PytorchNeuralStyleTransfer/blob/master/NeuralStyleTransfer.ipynb](https://github.com/leongatys/PytorchNeuralStyleTransfer/blob/master/NeuralStyleTransfer.ipynb)
 
