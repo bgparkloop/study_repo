@@ -15,8 +15,22 @@ Style transfer learning은 두 가지의 입력 이미지\(Content & Style\)가 
 2. Style transfer 네트워크 모델을 이용하는 방법
    * 서로 다른 도메인\(A style, B style\)끼리 변환되는 네트워크를 학습
    * 장점 : 네트워크를 학습한 후 사용만 하면 됨
-   * 단점 : 도메인 별로 학습을 해야 , 데이터가 많이 필
+   * 단점 : 도메인 별로 학습을 해야 , 데이터가 많이 필요함
 
+## 2. Methods
+
+### 2.1. Image Style Transfer Using Convolutional Neural Networks
+
+2016년 CVPR에서 발표된 논문으로 CNN을 이용하여 Style Transfer Learning을 성공적으로 수행하였다. 주요 포인트는 Pretrained VGG 19모델을 이용하여 Content와 Style 이미지 간의 차이를 줄여주는 방법을 End-to-End로 만들었다. 공식 코드 및 사람들이 작성한 코드를 기반으로 좀 더 분석하자면,
+
+* Model : Pretrained VGG 19 \(Gradient update 없음\)
+* Input Image
+  * Content : Style을 적용하고자 하는 이미지 \(Gradient update 없음\)
+  * Style : Content 이미지에 적용하고자 하는 Style을 갖는 이미지 \(Gradient update 없음\)
+  * Target : 적용하고자 하는 Style을 적용한 Content 이미지
+    * Random Noise, Content Image, Style Image 중 1개를 선택
+    * Gradient update 있음 \(Content + Style Image로 변환이 진행되어야 하기 때문\)
+* 
 
 
 ## References
