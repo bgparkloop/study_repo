@@ -71,3 +71,17 @@ Shoe dataset으로 학습한 결과에서는 Fig. 5의 \(a\)는 유사하다고 
 
 마지막으로, Mask에 대해 고찰한 결과, 기존 triplet 학습법에서는 subspace에 대한 구분이 없기 때문에 왼쪽 그림과 같이 나타난다. 반면, 고정된 mask를 갖게 하는 경우 학습한 embedding에 따라 분명하게 나뉘는 부분으로 mask들이 갈라지게 된다. 마지막으로, 오른쪽과 같이 mask까지 학습한 경우 각 subspace마다 큰 차이를 나타내는 부분과 어느정도 공통적인 부분까지 고려한 분포를 보이는 것을 확인 할 수 있다.
 
+### 3.4. Prediction Results
+
+![](../../.gitbook/assets/screenshot-from-2020-02-12-14-51-34.png)
+
+Shoe dataset에 대해 소개한 방법들에 대해 유사도 측정\(classification\) 성능을 평가하였다. Standard 방법이 가장 Error rate가 높았고, set에 특화되게 triplet을 뽑은 것, masking 기법을 쓴 순서대로 Error rate가 작아짐을 볼 수 있다.
+
+![](../../.gitbook/assets/screenshot-from-2020-02-12-14-51-46.png)
+
+Concept\(subspace\)으로 나뉜 데이터셋 양에 따른 Error rate도 양이 많아질수록 Learned mask를 사용함이 가장 좋은 것을 알 수 있었다.
+
+## 4. Conclusion
+
+논문에서 소개된 내용은 굉장히 단순하지만 상당히 효과적임을 알 수 있었다. 일단 Embedding에서 masking을 통해 필요한 concept만 추출해서 clustering 한다는 것이 인상적이다. Triplet에서도 이정도의 성능을 보인다면, proxy based 모델에서는 좀 더 좋은 성능을 보이지 않을까 싶다. 추후, 이에 관해 학습 후 결과를 추가할 예정이다.
+
