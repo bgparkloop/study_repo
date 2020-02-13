@@ -1,6 +1,6 @@
 # Docker in Linux
 
-## 1. Installation
+## 1. 설
 
 도커에서 다양한 리눅스 배포판에 대해 알아서 인식하고 도커 패키지를 설치해주는 아래와 같은 스크립트를 제공함. 설치 후 docker version으로 설치가 제대로 됬는지 확인 가능.
 
@@ -18,7 +18,7 @@ sudo usermod -aG docker $USER # 현재 접속중인 사용자에게 권한주기
 sudo usermod -aG docker your-user # your-user 사용자에게 권한주기
 ```
 
-## 2. Run
+## 2. Run 명령
 
 ### 2.1. 기본 실행법
 
