@@ -238,6 +238,8 @@ docker rmi ${TENSORFLOW_IMAGE_ID}
 * --tail : --tail 10 과 같이 입력하면, 마지막 10줄의 로그만 보여준다.
 * -f : 해당 옵션 사용 시, 실시간으로 로그를 출력한다.
 
+도커의 로그파일은 표준 스트림 우 stdout, stderr를 수집하여 보여줌. 컨테이너의 로그 파일은 json으로 어딘가에 저장되며, 플러그인들을 사용하면 json이 아닌 다른 로그 서비스에 전달 가능하다.
+
 ```text
 docker logs [OPTIONS] CONTAINER
 
@@ -247,13 +249,51 @@ docker logs ${WORDPRESS_CONTAINER_ID}
 
 ### 3.8. exec
 
-
+컨테이너 관리 및 실행 중인 컨테이너에 들어가거나 파일을 실행하려면 exec 명령어를 사용하면 된다. run 명령어와 형태는 비슷하지만, run은 컨테이너를 만들어서 실행하고 exec는 실행 중인 컨테이너에 명령을 하는 차이가 있다.
 
 ```text
+docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 
+#### 쉘을 통해서 접근하
+docker exec -it mysql /bin/bash
+
+# MySQL test
+$ mysql -uroot
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| wp                 |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> quit
+exit
+
+### 직접적으로 mysql 명령어 실행
+docker exec -it mysql mysql -uroot
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| wp                 |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> quit
 ```
 
-
+## 4. 컨테이너 업데이트
 
 ## References
 
