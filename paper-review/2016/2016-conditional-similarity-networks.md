@@ -83,7 +83,7 @@ Concept\(subspace\)으로 나뉜 데이터셋 양에 따른 Error rate도 양이
 
 ## 4. Conclusion
 
-논문에서 소개된 내용은 굉장히 단순하지만 상당히 효과적임을 알 수 있었다. 일단 Embedding에서 masking을 통해 필요한 concept만 추출해서 clustering 한다는 것이 인상적이다. Triplet에서도 이정도의 성능을 보인다면, proxy based 모델에서는 좀 더 좋은 성능을 보이지 않을까 싶다. 추후, 이에 관해 학습 후 결과를 추가할 예정이다.
+논문에서 소개된 내용은 굉장히 단순하지만 상당히 효과적임을 알 수 있었다. 일단 Embedding에서 masking을 통해 필요한 concept만 추출해서 clustering 한다는 것이 인상적이다. Triplet에서도 이정도의 성능을 보인다면, proxy based 모델에서는 좀 더 좋은 성능을 보이지 않을까 싶다.
 
 ## References
 
