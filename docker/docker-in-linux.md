@@ -109,7 +109,9 @@ mysql> quit
 
 2.2.4. WordPress
 
+블로그나 웹으로 많이 사용되는 엔진으로 앞 예제들보단 실행법이 살짝 복잡하다. 우선, 데이터베이스가 필요하니 MySQL로 데이터베이스를 만들어 준다. 그 후, --link 옵션을 통해 MySQL 데이터베이스를 wordpress에 연결시켜준다. link 옵션은 연결한 컨테이너의 IP와 환경변수 정보를 호스트에게 공유해주기 때문에 wordpress에서 자연스럽게 MySQL 데이터베이스 정보를 알 수 있다.
 
+> --link 옵션은 deprecated 되었기 때문에, 실제로는 docker network 기능을 사용하여야 함.
 
 ```text
 # create mysql database
@@ -129,7 +131,129 @@ docker run -d -p 8080:80 \
   wordpress
 ```
 
-asdasd
+2.2.5. Tensorflow
+
+Tensorflow를 docker 통해서도 쉽게 환경구성이 가능하다. tensorflow 뿐 아니라 연관되어 필요한 아래의 리스트를 모두 같이 제공한다.
+
+* numpy, scipy, pandas, jupyter, scikit-learn, gensim, BeautifulSoup4
+
+```text
+docker run -d -p 8888:8888 -p 6006:6006 teamlab/pydata-tensorflow:0.1
+```
+
+## 3. 자주 사용할 도커 명령어
+
+### 3.1. ps
+
+ps는 실행 중인 컨테이너 목록을 확인하는 명령어이다. 여기에 -a 또는 --all을 추가하면, 실행 중이지 않은 컨테이너도 확인된다. 아래에서 우분투 컨테이너에는 Exited\(O\)가 표기되어 있는데, 이는 컨테이너가 종료되어 있다는 뜻이며 다시 실행이 가능하다.
+
+```text
+docker ps [OPTIONS]
+
+docker ps
+CONTAINER ID        IMAGE                           COMMAND                  CREATED              STATUS              PORTS                                                    NAMES
+6a1d027b604f        teamlab/pydata-tensorflow:0.1   "/opt/start"             About a minute ago   Up About a minute   0.0.0.0:6006->6006/tcp, 22/tcp, 0.0.0.0:8888->8888/tcp   desperate_keller
+52a516f87ceb        wordpress                       "docker-entrypoint.sh"   8 minutes ago        Up 8 minutes        0.0.0.0:8080->80/tcp                                     happy_curran
+2e2c569115b9        mysql:5.7                       "docker-entrypoint.sh"   9 minutes ago        Up 9 minutes        0.0.0.0:3306->3306/tcp                                   mysql
+56341072b515        redis                           "docker-entrypoint.sh"   16 minutes ago       Up 9 minutes        0.0.0.0:1234->6379/tcp                                   furious_tesla
+
+docker ps -a
+CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS                      PORTS                                                    NAMES
+6a1d027b604f        teamlab/pydata-tensorflow:0.1   "/opt/start"             2 minutes ago       Up 2 minutes                0.0.0.0:6006->6006/tcp, 22/tcp, 0.0.0.0:8888->8888/tcp   desperate_keller
+52a516f87ceb        wordpress                       "docker-entrypoint.sh"   9 minutes ago       Up 9 minutes                0.0.0.0:8080->80/tcp                                     happy_curran
+2e2c569115b9        mysql:5.7                       "docker-entrypoint.sh"   10 minutes ago      Up 10 minutes               0.0.0.0:3306->3306/tcp                                   mysql
+56341072b515        redis                           "docker-entrypoint.sh"   18 minutes ago      Up 10 minutes               0.0.0.0:1234->6379/tcp                                   furious_tesla
+e1a00c5934a7        ubuntu:16.04                    "/bin/bash"              32 minutes ago      Exited (0) 32 minutes ago                                                            berserk_visvesvaraya
+```
+
+### 3.2. stop
+
+컨테이너를 중지하는 명령어로 특별할 건 없다. 중지하려고하는 컨테이너의 ID만 추가로 입력하면 된다.
+
+> 도커의 ID는 길이가 64자인데, 겹치지만 않는다면 앞의 2자리정도만 입력해도 자동으로 매칭된다.
+
+```text
+docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+docker ps # get container ID
+docker stop ${TENSORFLOW_CONTAINER_ID}
+docker ps -a # show all containers
+```
+
+### 3.3. rm
+
+컨테이너를 제거하는 명령어이다. 중지와 마찬가지로 크게 중요한 옵션은 없다.
+
+```text
+docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+docker ps -a # get container ID
+docker rm ${UBUNTU_CONTAINER_ID} ${TENSORFLOW_CONTAINER_ID}
+docker ps -a # check exist
+```
+
+> 중지된 컨테이너를 일일이 삭제 하는 건 귀찮은 일입니다. `docker rm -v $(docker ps -a -q -f status=exited)` 명령어를 입력하면 중지된 컨테이너 ID를 가져와서 한번에 삭제합니다.
+
+### 3.4. images
+
+이미지 목록을 확인하는 명령어이다. 이미지의 다양한 정보들이 나온다. 틈틈히 필요없는 이미지는 삭제해주는 것이 관리에 편할 것 같다.
+
+```text
+docker images [OPTIONS] [REPOSITORY[:TAG]]
+
+docker images
+REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
+wordpress                   latest              b1fe82b15de9        43 hours ago        400.2 MB
+redis                       latest              45c3ea2cecac        44 hours ago        182.9 MB
+mysql                       5.7                 f3694c67abdb        46 hours ago        400.1 MB
+ubuntu                      16.04               104bec311bcd        4 weeks ago         129 MB
+teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago        3.081 GB
+```
+
+### 3.5. pull
+
+이미지를 다운로드하는 명령어이다. 어차피 run 명령어에 없으면 자동으로 받는 기능이 포함되어 있으니 안 쓸 것 같지만, pull 명령어로 최신버전을 받을 때 사용한다.
+
+```text
+docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+
+docker pull ubuntu:14.04
+```
+
+### 3.6. rmi
+
+이미지를 삭제하는 명령어이다. images 명령어에서 볼 수 있는 ID 중 입력하면 삭제된다. 해당 이미지에 대해 컨테이너가 실행 중이라면, 컨테이너를 종료해야지 삭제가 가능하다.
+
+```text
+docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+docker images # get image ID
+docker rmi ${TENSORFLOW_IMAGE_ID}
+```
+
+### 3.7. logs
+
+컨테이너의 로그를 보는 명령어이다. 해당 명령어를 통해 컨테이너가 정상 동작하는지 확인 가능하다. 다음과 같은 옵션을 통해 로그 정보를 어떻게 출력할지 정할 수 있다.
+
+* --tail : --tail 10 과 같이 입력하면, 마지막 10줄의 로그만 보여준다.
+* -f : 해당 옵션 사용 시, 실시간으로 로그를 출력한다.
+
+```text
+docker logs [OPTIONS] CONTAINER
+
+docker ps
+docker logs ${WORDPRESS_CONTAINER_ID}
+```
+
+### 3.8. exec
+
+
+
+```text
+
+```
+
+
 
 ## References
 
