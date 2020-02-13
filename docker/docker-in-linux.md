@@ -295,6 +295,84 @@ mysql> quit
 
 ## 4. 컨테이너 업데이트
 
+### 4.1. 데이터 볼륨 연결
+
+도커에서 컨테이너 업데이트는
+
+1. 새 버전 이미지 다운로드 \(pull\)
+2. 기존 컨테이너 삭제 \(stop, rm\)
+3. 새 이미지 기반으로 컨테이너 실행 \(run\)
+
+으로 이루어지며, 주의해야 할 점은 컨테이너를 삭제하면 그 안에서 생성/업로드 등을 진행했던 것이 모두 사라진다. 그래서 AWS S3같은 클라우드 서비스나 외부 디스크를 컨테이너에 연결하여서 외부에 데이터를 저장하는 것이 바람직하다.
+
+run 명령어 옵션 중 -v 옵션을 사용하면
+
+```text
+# before
+docker run -d -p 3306:3306 \
+  -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
+  --name mysql \
+  mysql:5.7
+
+# after
+docker run -d -p 3306:3306 \
+  -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
+  --name mysql \
+  -v /my/own/datadir:/var/lib/mysql \ # <- volume mount
+  mysql:5.7
+```
+
+외부의 데이터 볼륨 /my/own/datadir 를 컨테이너의 /var/lib/mysql 에 연결하여 저 경로에 저장된 데이터는 컨테이너가 제거되도 사라지지 않게 된다.
+
+### 4.2. Docker Compose
+
+지금까지 도커를 열심히 커맨드라인에서 명령어를 통해 작업하였지만, 실사용에서는 더 복잡한 작업들이 많기 때문에 여러가지 설정을 추가하기 어려워 진다. 도커는 YAML 방식의 설정파일을 이용해서 컨테이너의 세부 설정들을 손쉽게 관리할 수 있게 해준다.
+
+리눅스만 별도로 docker compose를 다음과 같이 설치해주어야 한다.
+
+```text
+curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+# test
+docker-compose version
+```
+
+이전 예제의 wordpress를 같은 옵션으로 yaml 파일을 통해 만들게 되면 다음과 같다.
+
+```text
+version: '2'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: wordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     volumes:
+       - wp_data:/var/www/html
+     ports:
+       - "8000:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_PASSWORD: wordpress
+volumes:
+    db_data:
+    wp_data:
+```
+
+yaml 파일 생성 후, docker-compose up 명령어를 사용하면 손쉽게 워드프레스가 실행된다.
+
 ## References
 
 * [https://www.leafcats.com/153](https://www.leafcats.com/153)
