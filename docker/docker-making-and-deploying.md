@@ -201,7 +201,30 @@ RUN apt-get -y -qq update && \
     apt-get -y -qq install ruby
 ```
 
+## 도커 이미지 배포
 
+도커는 빌드한 이미지를 git처럼 도커 레지스트리라고 불리는 이미지 저장소에 push & pull 하여 사용함. 도커 레지스트리는 오픈소스이며 무료로 설치 가능. 설치형이 아닌 것을 사용하려면 도커 허브를 사용하면 됨.
+
+### Docker Hub
+
+도커 허브를 사용하려면 docker login 명령어로 로그인을 해야한다. \(그 전에 미리 웹사이트에서 회원가입 필요\) 도커 이미지 이름은 다음과 같이 구성된다.
+
+```text
+[Registry URL]/[사용자 ID]/[이미지명]:[tag]
+
+
+# tag 명령어는 기존에 만들어진 이미지의 이름을 지어줄 수 있음.
+docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+# Docker Hub에 Push 하기
+docker push subicura/sinatra-app:1
+```
+
+* **Registry URL** : 기본적으로 docker 허브를 바라보고 있어서 docker.io가 자동 입력. 특정 URL 지정도 가능.\(Private 저장소 같이\)
+* **사용자 ID** : 지정하지 않으면 기본 ID인 library로 지정됨.
+* **이미지 명** : 이전 예제들처럼 Name:Version 의 형식으로 지정하면 됨.
+
+도커의 배포 방식은 빌드한 이미지를 업로드하고 다운로드 받을 줄 만 알면 끗. 업데이트 과정도 복잡하지 않다. 그냥 기존에 잘 작동 중인 컨테이너를 끄고, 새 컨테이너로 덮어 쓴 후 다시 실행하면 된다. 물론 이 과정에서 잠깐 공백이 생기지만 이를 보완하는 무중단 배 방법들도 있다.
 
 ## References
 
