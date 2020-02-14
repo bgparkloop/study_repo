@@ -48,7 +48,7 @@
 ## \[DOCKER\]
 
 * [Docker in Linux](docker/docker-in-linux.md)
-* [Docker: Making and Deploying](docker/docker-making-and-deploying.md)
+* [Docker: Creating and Deploying](docker/docker-making-and-deploying.md)
 
 ## \[ALGORITHM\]
 
