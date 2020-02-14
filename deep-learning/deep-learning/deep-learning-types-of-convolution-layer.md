@@ -6,11 +6,11 @@
 
 Convolutional layer는 5개의 Component로 이루어진다.
 
-* Input Channel : 말그대로 입력할 데이터의 크기이다. 512x512와 같은 사이즈를 말한다.
-* Output Channel : 출력할 데이터의 크기이다.
-* Kernel Size : Convolutional layer가 한 번 연산 시 Feature를 추출할 영역을 의미. 얼만큼의 영역을 지켜볼 지\(View\)라고도 할 수 있다. 일반적으로 3x3 크기를 가장 널리 사용한다.
-* Stride : Convolution 연산을 실행 할 때, 얼만큼 건너뛰며 진행할지 결정한다. 기본크기는 1로 지정되어 한칸 씩 움직이지만, Down sampling을 위해 2나 3과 같은 값도 사용한다.
-* Padding : Input 또는 Output 데이터 테두리\(border\)에 값을 얼만큼 추가할지 결정한다. Convolution 연산을 수행하면 Input보다 Output 크기가 줄어들기 때문에 Input과 Output 크기를 맞춰주기 위해 보통 사용한다.
+* **Input Channel** : 말그대로 입력할 데이터의 크기이다. 512x512와 같은 사이즈를 말한다.
+* **Output Channel** : 출력할 데이터의 크기이다.
+* **Kernel Size** : Convolutional layer가 한 번 연산 시 Feature를 추출할 영역을 의미. 얼만큼의 영역을 지켜볼 지\(View\)라고도 할 수 있다. 일반적으로 3x3 크기를 가장 널리 사용한다.
+* **Stride** : Convolution 연산을 실행 할 때, 얼만큼 건너뛰며 진행할지 결정한다. 기본크기는 1로 지정되어 한칸 씩 움직이지만, Down sampling을 위해 2나 3과 같은 값도 사용한다.
+* **Padding** : Input 또는 Output 데이터 테두리\(border\)에 값을 얼만큼 추가할지 결정한다. Convolution 연산을 수행하면 Input보다 Output 크기가 줄어들기 때문에 Input과 Output 크기를 맞춰주기 위해 보통 사용한다.
 
 Computational Cost
 
