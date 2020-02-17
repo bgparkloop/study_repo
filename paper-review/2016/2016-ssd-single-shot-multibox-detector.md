@@ -41,11 +41,32 @@ SSD의 기본 모델 구성은 위와 같다. VGG-16 model을 backbone으로 사
 
 ### 3.1. Matching strategy
 
-Ground truth box들과 Default box들\(conv layer에서 추출된 기본 박스들\)의 IoU\(a.k.a. Jaccard overlap\)이 0.5 이상인 것들만 취급한다. \(어차피 이보다 작은 값들은 실제 object가 있는 곳과 너무 동떨어져서 의미가 없기 때문\)
+Ground truth box들과 Default box들\(conv layer에서 추출된 기본 박스들\)의 IoU\(a.k.a. Jaccard overlap\)이 0.5 이상인 것들만 취급한다. \(IoU가 낮다는 것은 실제 object가 있는 곳과 너무 동떨어져서 의미가 없기 때문\)
 
 ### 3.2. Training objectives
 
-asdasd
+SSD의 Loss 구성은 다른 Object detection model과 동일하게 Confidence와 Location 부분으로 나뉘어진다.
+
+Confidence의 경우 softmax loss로 간단하게 계산이 된다.
+
+Location Loss는 Faster RCNN에서 나온 smooth L1 loss를 이용하는데, 추정된 Location \(center X, Y, Width, Height\)에 대해 Groundtruth의 각 Center X, Center Y, Width, Height와의 차이 값으로 계산한다. Location Loss의 식은 아래와 같다.
+
+$$
+L_{loc}(x,l,g) = \sum_{i} \sum_{m} x_{ij}^k smooth_{L1}(l_{i}^m-\hat{g_{j}^m})
+$$
+
+* x는 category k에 대한 groundtruth 확률값
+* l은 추정된 box 중 i번째의 m\(CX, CY, W, H 중 하나\) 
+* g는 groundtruth box 중 j번째의 m\(CX, CY, W, H 중 하나\) 값
+
+따라서, Conf와 Loc의 Loss 합은 다음과 같이 나타낸다.
+
+$$
+L(x,c,l,g)=\frac{1}{N}(L_{conf}(x,c) + \alpha L_{loc}(x,l,g))
+$$
+
+* N은 prediction된 box의 갯수. \(N=0이면, loss는 0으로 처리. update가 필요없으므로\)
+* alpha 값은 논문에서는 cross validation을 통해 1로 설정하였음.
 
 ### 3.3. Choosing scales and aspect ratios for default boxes
 
