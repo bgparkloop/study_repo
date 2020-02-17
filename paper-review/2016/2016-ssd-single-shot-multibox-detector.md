@@ -120,7 +120,37 @@ sample patch의 크기는 원본 크기의 0.1에서 1배\(원본크기\)만큼 
 
 ## 4. Experimental Results
 
+### 4.1. Base Network
 
+저자들은 VGG16 모델을 기본으로 사용하였고 일부 layer에 변형을 주었다.
+
+* DeepLab-LargeFOV를 참조하여 fc6, fc7의 layer를 Conv layer로 변경
+* pool5의 parameter를 2x2-s2 에서 3x3-s1으로 변경
+* atrous algorithm 적용
+* dropout 및 fc8 layer 제
+
+### 4.2. Model Analysis
+
+![](../../.gitbook/assets/screenshot-from-2020-02-17-17-45-13.png)
+
+SSD는 Faster RCNN같은 2 Stage 모델보다 Localization Error가 작음. \(object shape을 직접적으로 regress하고, object category를 분류하기 때문\) 하지만, 비슷한 category들 사이에서는 성능이 떨어짐.
+
+또한, SSD는 small object를 검출에 대해서는 약한 모습을 보임. 그래서 Input을 300에서 512로 늘리면 좀 더 잘 찾아짐. \(그래도 근본적으로 small object에 대해 feature가 약하기 때문에 검출이 잘 안됨\) 반면, large object에 대해서는 잘 찾음. \(아래 그림처럼 box 크기에 따라 성능이 크게 좌우됨\)
+
+![](../../.gitbook/assets/screenshot-from-2020-02-17-17-46-10.png)
+
+Model 성능 점검을 위해 다양한 방식으로 SSD성능을 점검함.
+
+![](../../.gitbook/assets/screenshot-from-2020-02-17-17-45-47.png)
+
+* Aspect ratio에서 2와 3을 넣느냐 안 넣는냐는 성능차이가 크게 난다.
+* Atrous algorithm은 속도 측면에서 큰 도움이 된다.
+* Multi layer에서 추출하는 feature들이 resolution을 cover하는데 큰 도움이 된다. \(저자들이 실험을 통해 각 layer들을 제거하면서 했을 때, mAP가 74.3에서 62.4까지 떨어짐을 확인함.\)
+* Augmentation 시 Zoom In, Zoom Out을 통해 small object 분류 정확도를 향상시킴.
+  * Zoom in으로 small object를 large object로 변환
+  * Zoom out으로 large object를 small object로 변
+
+결론은 이 당시 속도도 제일 빠르고, 성능도 거의 Top임.
 
 ## References
 
