@@ -68,13 +68,38 @@ $$
 * N은 prediction된 box의 갯수. \(N=0이면, loss는 0으로 처리. update가 필요없으므로\)
 * alpha 값은 논문에서는 cross validation을 통해 1로 설정하였음.
 
+Loss의 업데이트는 위의 matching strategy에서 얻어진 predicted box들에서만 update 되므로, 그 외 box들은 무시된다. \(좀 더 정확한 update를 위해 필요한 것만 update\)
+
 ### 3.3. Choosing scales and aspect ratios for default boxes
 
-adasd
+한 개의 Network에서 multi layer의 feature map들로 다양한 크기의 object를 학습할 수 있게 방법을 제시함. aspect ratio의 선택이 가장 중요해보이는데, 임의로 바꾸면 성능이 떨어짐. 문제마다 이를 최적화하면 더 좋을 듯.
+
+$$
+s_k = s_{min} + \frac{s_{max} - s_{min}}{m-1}(k-1), k \in [1,m]
+$$
+
+* K : feature map을 추출하는 Layer의 수
+* s : scale parameter
+  * min : 최소 크기
+  * max : 최대 크기
+  * Layer마다 scale 범위를 정규화하기위해 저렇게 수식을 사용
+
+$$
+a_r \in \{1,2,3,\frac{1}{2},\frac{1}{3}\}
+$$
+
+* a : aspect ratios \(Box의 가로, 세로 비율 조정용\)
+
+$$
+w_{k}^a = s_k \sqrt{a_r}, h_{k}^a = s_k /\sqrt{a_r}
+$$
+
+* w : scale과 aspect ratio를 반영한 box의 width
+* h : scale과 aspect ratio를 반영한 box의 height
 
 ### 3.4. Hard negative mining
 
-asdasdas
+MMmMMaaasd
 
 ### 3.5. Data augmentation
 
