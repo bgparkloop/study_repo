@@ -99,13 +99,24 @@ $$
 
 ### 3.4. Hard negative mining
 
-MMmMMaaasd
+Matching까지 끝나고나면, 상당히 많은 box들이 negative 샘플이 되는데, 이것들을 전부 사용하면 학습에 도움이 안된다. 그래서 Confidence로 내림차순으로 정렬하여 Negative와 Positive가 3:1이 되도록 추출해서 학습에 사용한다. 이 방식으로 진행하면 optimization이 더 빠르고 학습도 더 안정적이라고 주장한다.
 
 ### 3.5. Data augmentation
 
-asdasda
+Data augmentation을 다음과 같은 순서로 진행된다.
 
+1. Sample patch in original image
+2. resize to fixed size
+3. horizontally flipped with prob of 0.5
+4. photo-metric distortion
 
+패치 샘플링의 경우 다음 중 하나를 택하여 선택된다.
+
+* 전체 이미지 크기
+* sample된 patch의 minimum IoU가 object의 0.1, 0.3, 0.5, 0.7, 0.9 중 하나
+* 그냥 무작위 sample patch
+
+sample patch의 크기는 원본 크기의 0.1에서 1배\(원본크기\)만큼 중 하나로 선택된다.
 
 ## 4. Experimental Results
 
