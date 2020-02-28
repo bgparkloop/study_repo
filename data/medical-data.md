@@ -61,9 +61,22 @@ CXR은 쉽게 구하기 쉬운 이미지지만, public dataset은 정말 Quality
 
 ### 데이터 소개
 
+카메라를 통해 눈을 촬영한 이미지를 갖고 진단하는 것으로 일반적으로 녹내장, 당뇨병성 망막증 등을 진단하기 위해 사용한다. CXR과 더불어 Public dataset이 굉장히 많으며 접근성이 좋다. 하지만, CXR과 마찬가지로 Public dataset의 상태는 그리 좋지 않다. \(그래도 CXR보다는 좋다\)
+
+![](../.gitbook/assets/typical-fundus-images-at-the-different-stages-of-dr-a-normal-b-mild-npdr-c.png)
+
+위 그림과 같이 눈을 굉장히 근접해서 촬영하며 홍채, 동공, 혈관 등이 자세하게 보인다. 여기서 혈관의 변이성이나 특정 부위의 변형 등을 찾아내어 진단하게 된다.
+
 ### Augmentation 방법
 
+Color가 거의 붉은색 계열로 비슷하며 촬영된 모양도 거의 유사하기 때문에 Rotation이나 Hue 등을 조절할 필요가 적어진다.
+
+* Brightness/Contrast Adjustment \(안저 이미지 특성 상 환자가 눈을 어디까지 가까이하냐에 따라 밝기가 많이 차이난다\)
+* Horizontal / Vertical Flip
+* 
 ### 어려운 점
+
+
 
 ## Pathology
 
