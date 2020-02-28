@@ -40,6 +40,7 @@
 ## \[DATA\]
 
 * [Medical Data](data/medical-data.md)
+* [General Image Data](data/general-image-data.md)
 
 ## \[MOBILE APP\]
 
