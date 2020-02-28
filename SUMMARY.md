@@ -43,6 +43,7 @@
 
 ## \[MOBILE APP\]
 
+* [Android](mobile-app/android.md)
 * [Flutter Summary](mobile-app/flutter-summary/README.md)
   * [Flutter: Installation](mobile-app/flutter-summary/flutter-installation.md)
 
