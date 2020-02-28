@@ -37,9 +37,9 @@
 
 * [Untitled](computer-vision/untitled.md)
 
-## \[MEDICAL IMAGING\]
+## \[DATA\]
 
-* [Untitled](medical-imaging/untitled.md)
+* [X-ray Data](data/untitled.md)
 
 ## \[MOBILE APP\]
 
