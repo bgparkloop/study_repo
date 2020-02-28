@@ -4,7 +4,38 @@
 
 의료 분야에서의 데이터들에 대해 간단한 소개 및 특징, AI 학습 시 어떤점을 고려해야 하는지에 대해 요약하는 문서입니다.
 
+의료데이터의 경우 다른 데이터들보다 해당 분야에 대한 전문적인 지식이 많이 필요하다. 예를 들면 Chest X-ray와 같은 데이터가 있다면 그냥 봐서는 어디가 병인지도 모르는게 일반적이다. 알아도 비슷한 다른 이미지를 주면 알기가 어렵다. 그만큼 이를 제공해주는 전문가\(의사\)와의 의사소통이 많이 필요하며 개인적으로도 많은 공부가 필요한 분야이다. 전문가분들에게 학습에 필요한 정확한 Annotation 정보를 얻기 위해서는 그만큼 공부가 필요하기 때문이다.
+
 ## Chest X-ray
+
+Pathology, Fundus와 같이 가장 쉽게 접근 가능한 의료 데이터라고 볼 수 있다. 목부터 치골정도까지의 범위를 X-ray 촬영한 이미지를 가리키며 해당 이미지에서도 다양한 질병을 관측 가능하다.
+
+![](../.gitbook/assets/cxr.jpg)
+
+Chest X-ray\(이하 CXR\)은 grayscale의 밝기 분포만으로 이루어진 영상이므로, 질병에 따른 위치, Texture와 Shape이 주된 특징이라고 볼 수 있다. 전통적인 방식으로는 GLCM\(Gray Level Co-occurance Matrix\)를 이용한 다양한 Texture, Shape feature를 추출하여 SVM과 같은 ML 기법을 사용한다.
+
+Deep Learning을 이용한 학습법으로는 다양한 방식이 있겠지만, 일반적으로 아래와 같은 Augmentation을 주로 사용하여 학습을 진행한다. 하지만 가장 중요한 것은 Task에 따른 Annotation의 Quality가 가장 중요하다고 볼 수 있겠다.
+
+* Rotation \(사람마다 촬영할 때 항상 똑바로 서있지 않다.\)
+* Horizontal / Vertical Flip \(좌우 반대나 이미지 자체 상하 반대가 있다\)
+* Brightness/Contrast Adjustment \(희미한 Feature를 강조하기 위해\)
+* CLAHE \(Histogram Equalization 방법 중 하나로 CXR에서 굉장히 효과적임\)
+* Elastic Deformation \(CXR 이미지를 다양한 방식으로 Morphological 부분을 변형시켜 효율적인 학습이 가능하게 함\)
+
+CXR은 쉽게 구하기 쉬운 이미지지만, public dataset은 정말 Quality가 좋지 않다. AI 학습을 위해 다양한 시도를 경험하면서 다음과 같은 문제들이 있었다.
+
+* Label과 이미지가 맞지 않음
+* 나이가 너무 많거나 어려서 CXR 촬영이 제대로 이루어지지 않음
+* 병이 너무 심해서 병원에서 촬영하는 일반적인 CXR이 아닌 Portable 기기를 이용한 촬영인 경우
+* Annotation의 부재 \(정확한 Annotation을 받기가 어렵다\)
+* 정면 사진이라면서 옆모습이 있음 \(이것도 Label 문제라고 볼 수 있을듯하다\)
+* 이미지 자체가 분간이 어려움 \(최소 3분의 1에서 절반 가량이 그냥 회색이거나 회색이 진하게 겹쳐있음\)
+
+이러한 데이터 구성 문제도 그렇고 일반적으로 알려진 14 disease라고 불리는 것들 중 증상과 병명이 섞여 있어 이를 이미지에서 분간하기 쉽지 않다. \(증상들이 여러개 존재해야 병명을 붙이는 것이기 때문\)
+
+이러한 저 Quality 데이터에도 불구하고 다양한 테크닉으로 성능을 끌어올릴 수는 있지만 만족할만한 성과를 얻기는 어렵다. 결국 Data Cleaning과 정확한 Annotation이 필수불가결하다.
+
+## Fundus
 
 ## Digital Pathology
 
