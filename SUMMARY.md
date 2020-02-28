@@ -39,8 +39,6 @@
 
 ## \[DATA\]
 
-* [X-ray Data](data/untitled.md)
-* [Pathology Data](data/pathology-data.md)
 * [Medical Data](data/medical-data.md)
 
 ## \[MOBILE APP\]
