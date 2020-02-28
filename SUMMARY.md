@@ -40,6 +40,8 @@
 ## \[DATA\]
 
 * [X-ray Data](data/untitled.md)
+* [Pathology Data](data/pathology-data.md)
+* [Medical Data](data/medical-data.md)
 
 ## \[MOBILE APP\]
 
@@ -63,5 +65,5 @@
 
 ## \[Side Projects\]
 
-* [Style Learning in Mobile](side-projects/style-learning-in-mobile.md)
+* [\(작성중\) Style Learning in Mobile](side-projects/style-learning-in-mobile.md)
 
