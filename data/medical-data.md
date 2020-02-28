@@ -41,9 +41,37 @@ CXR은 쉽게 구하기 쉬운 이미지지만, public dataset은 정말 Quality
 
 이러한 저 Quality 데이터에도 불구하고 다양한 테크닉으로 성능을 끌어올릴 수는 있지만 만족할만한 성과를 얻기는 어렵다. 결국 Data Cleaning과 정확한 Annotation이 필수불가결하다.
 
+## CT
+
+### 데이터 소개
+
+### Augmentation 방법
+
+### 어려운 점
+
+## MRI
+
+### 데이터 소개
+
+### Augmentation 방법
+
+### 어려운 점
+
 ## Fundus
 
-## Digital Pathology
+### 데이터 소개
+
+### Augmentation 방법
+
+### 어려운 점
+
+## Pathology
+
+### 데이터 소개
+
+### Augmentation 방법
+
+### 어려운 점
 
 ## IVUS
 
