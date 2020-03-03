@@ -54,7 +54,15 @@ Vanilla GAN에서 Style에 대한 latent space를 만드는 network를 따로 �
 
 **2.3.2. Gated GAN**
 
+기존 Neural Transfer Learning처럼 content, target\(style\) 이미지 구성으로 학습하는 GAN이다. 기존 GAN이나 Style GAN이랑 다르게 Encoder와 Decoder 사이에 Transformer라는 gate module을 두었다. Network구조는 아와 같으며 gate마다 style을 다르게 줄 수 있도록 학습한다. 이 구조를 통해 encoder, decoder 파라미터는 공유하고 gate module만 style 수만큼 추가하여 효율적인 형태로 1개의 network로 multi style을 적용할 수 있게 하였다.
 
+![](../../.gitbook/assets/screenshot-from-2020-03-03-18-59-41.png)
+
+효율적인 구조를 통해 다른 Style transfer GAN보다 장점이 있는듯 하다. Neural Transfer Learning처럼 artist style을 적용한 사례에서도 상당한 퀄리티를 보여준다.
+
+![](../../.gitbook/assets/screenshot-from-2020-03-03-18-59-33.png)
+
+auxiliary classifier
 
 ## References
 
