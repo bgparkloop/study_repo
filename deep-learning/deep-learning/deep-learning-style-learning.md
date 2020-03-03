@@ -34,7 +34,7 @@ Style transfer learning은 두 가지의 입력 이미지\(Content & Style\)가 
 * Gram Matrix : Style Representation Feature 추출을 위해 각 Layer마다 추출된 Feature끼리 gram matrix를 이용하여 correlation을 계산한다. 이렇게 얻어진 multi-layer 간 correlation은 stationary하고 multi-scale을 아우르는 feature가 된다.
 * L-BFGS \(Limited-memory BFGS\) : Quasi-Newton 방법 중 하나로 복잡한 Hessian Matrix 연산이 들어가는 optimization에서 유용함.
 
-
+2.2. ㅁㅁㄴㅇㅁㄴㅇㅁㄴ
 
 
 
