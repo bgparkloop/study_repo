@@ -36,11 +36,23 @@ Style transfer learning은 두 가지의 입력 이미지\(Content & Style\)가 
 
 ### 2.2. GAN based Style Transfer Learning
 
-2.3.1. Style GAN
+기본적으로 GAN은 random noise를 이용하여 원하는 타겟 output을 생성해내고 판별하는 2개의 Network 구조로 되어있다. Vanilla GAN은 Style을 따로 지정하기가 어려우며, 그 뒤로 나온 GAN들은 조건을 붙이거나 구조를 변형하여 원하는 Style\(안경, 포즈, 머리색 등\)을 추가하거나 빼는 형태까지 가능하다. 그 중 2개에 대해서만 짧막하게 다뤄본다.
 
+**2.3.1. Style GAN**
 
+Vanilla GAN에서 Style에 대한 latent space를 만드는 network를 따로 두어 좀 더 효과적으로 이미지에 원하는 style을 적용하게 만들었다. \(아래 그림 참조\)
 
-2.3.2. Gated GAN
+![](../../.gitbook/assets/screenshot-from-2020-03-03-18-49-44.png)
+
+왼쪽은 기존의 GAN 구조이며, 오른쪽은 제안된 Style GAN의 구조이다. 왼쪽의 FC들로만 이루어진 작은 network로 random input vector에 대해 immediate latent space로 변경시켜주는 구조이다. 이렇게 임의의 벡터를 network를 거쳐 기존의 GAN에서 input vector의 분포가 Gaussian처럼 한정적이던 부분을 해결했다.
+
+학습된 latent vector를 가짜 데이터를 생성하는 network layer마다 추가 정보로 주어 각 layer에서 style정보를 받아들이게했다. 데이터 생성 network의 input layer에서는 style 정보를 받지않는데, 저자가 실험을 통해 input layer에서는 style정보가 무의미하다고 한다. 또한, style정보 말고도 추가로 각 layer에 random noise를 더해주는데 이것을 통해 style에 stochastic variation을 준다고 한다.
+
+![](../../.gitbook/assets/screenshot-from-2020-03-03-18-54-04.png)
+
+위 그림을 보면 \(a\)는 모든 layer에서 noise를 준 것이며, \(b\)는 모든 layer에 noise 추가가 없는 것이다. \(c\)는 fine style을 담당하는 layer에만, \(d\)는 coarse style을 담당하는 layer에만 준 것이다. 잘 살펴보면 noise를 주지 않았을 때보다 noise를 준 것이 훨씬 정교한 이미지를 생성하며, 더 다양한 이미지를 생성한다.
+
+**2.3.2. Gated GAN**
 
 
 
