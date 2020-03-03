@@ -36,7 +36,11 @@ Style transfer learning은 두 가지의 입력 이미지\(Content & Style\)가 
 
 ### 2.2. GAN based Style Transfer Learning
 
+2.3.1. Style GAN
 
+
+
+2.3.2. Gated GAN
 
 
 
@@ -51,4 +55,8 @@ Style transfer learning은 두 가지의 입력 이미지\(Content & Style\)가 
 * [https://github.com/cysmith/neural-style-tf/blob/a2c374f9ee2938f0022e1e0b720f4eb28cf7d0a8/neural\_style.py\#L406](https://github.com/cysmith/neural-style-tf/blob/a2c374f9ee2938f0022e1e0b720f4eb28cf7d0a8/neural_style.py#L406)
 * [https://github.com/leongatys/PytorchNeuralStyleTransfer/blob/master/NeuralStyleTransfer.ipynb](https://github.com/leongatys/PytorchNeuralStyleTransfer/blob/master/NeuralStyleTransfer.ipynb)
 * [https://wikidocs.net/22155](https://wikidocs.net/22155)
+* [https://arxiv.org/pdf/1812.04948.pdf](https://arxiv.org/pdf/1812.04948.pdf)
+* [https://arxiv.org/pdf/1904.02296v1.pdf](https://arxiv.org/pdf/1904.02296v1.pdf)
+* [https://blog.lunit.io/2019/02/25/a-style-based-generator-architecture-for-generative-adversarial-networks/](https://blog.lunit.io/2019/02/25/a-style-based-generator-architecture-for-generative-adversarial-networks/)
+* [https://github.com/rosinality/style-based-gan-pytorch/blob/8437a8bbd106ad4a4691b798ce35d30b5111990b/model.py\#L451](https://github.com/rosinality/style-based-gan-pytorch/blob/8437a8bbd106ad4a4691b798ce35d30b5111990b/model.py#L451)
 
