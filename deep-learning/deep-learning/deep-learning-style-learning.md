@@ -58,11 +58,9 @@ Vanilla GAN에서 Style에 대한 latent space를 만드는 network를 따로 �
 
 ![](../../.gitbook/assets/screenshot-from-2020-03-03-18-59-41.png)
 
-효율적인 구조를 통해 다른 Style transfer GAN보다 장점이 있는듯 하다. Neural Transfer Learning처럼 artist style을 적용한 사례에서도 상당한 퀄리티를 보여준다.
+Gated GAN에서는 Discriminator에서 Real/Fake를 분류하는 기존의 GAN 부분과 Auxiliary Classifier를 두어 Style 종류를 맞추는 2가지 output으로 나뉜다. LabelGAN처럼 이 2부분을 합치는 경우도 있지만 이렇게하면 Overlaid-gradient problem이 발생해 학습에 안좋은 영향을 주게된다. 아래 그림은 gated GAN을 학습하여 artist의 style대로 input 이미지에 적용시킨 예이다. 단일 모델로 다양한 style을 학습할 수 있음이 증명되는 것 같다.
 
 ![](../../.gitbook/assets/screenshot-from-2020-03-03-18-59-33.png)
-
-auxiliary classifier
 
 ## References
 
@@ -79,4 +77,6 @@ auxiliary classifier
 * [https://arxiv.org/pdf/1904.02296v1.pdf](https://arxiv.org/pdf/1904.02296v1.pdf)
 * [https://blog.lunit.io/2019/02/25/a-style-based-generator-architecture-for-generative-adversarial-networks/](https://blog.lunit.io/2019/02/25/a-style-based-generator-architecture-for-generative-adversarial-networks/)
 * [https://github.com/rosinality/style-based-gan-pytorch/blob/8437a8bbd106ad4a4691b798ce35d30b5111990b/model.py\#L451](https://github.com/rosinality/style-based-gan-pytorch/blob/8437a8bbd106ad4a4691b798ce35d30b5111990b/model.py#L451)
+* [https://arxiv.org/pdf/1703.02000.pdf](https://arxiv.org/pdf/1703.02000.pdf)
+* [https://github.com/colemiller94/gatedgan/blob/master/models.py](https://github.com/colemiller94/gatedgan/blob/master/models.py)
 
