@@ -50,3 +50,10 @@ Stochastic variation의 효과는 위 그림처럼 나타난다. \(a\)처럼 생
 
 LSUN dataset에 대해 학습하여 생성한 이미지들이다. 다양한 style이 적용되어 이미지가 만들어지는 것을 확인가능하다. 논문에서 따로 제안한 metric인 Path length와 Linear separability가 있는데 이는 생략한다.
 
+## Reference
+
+* [https://arxiv.org/abs/1812.04948](https://arxiv.org/abs/1812.04948)
+* [https://github.com/taki0112/StyleGAN-Tensorflow](https://github.com/NVlabs/stylegan)
+* [https://github.com/rosinality/style-based-gan-pytorch](https://github.com/rosinality/style-based-gan-pytorch)
+* [https://heartbeat.fritz.ai/stylegans-use-machine-learning-to-generate-and-customize-realistic-images-c943388dc672](https://heartbeat.fritz.ai/stylegans-use-machine-learning-to-generate-and-customize-realistic-images-c943388dc672)
+
