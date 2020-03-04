@@ -91,3 +91,9 @@ Cycle GAN과의 비교에서도 좋은 결과를 보여준다. 동일 style을 �
 
 전반적으로 기존 연구들의 좋은 점을 잘 합쳐 학습 안정화를 잘 해내었다. Transformer module을 추가하여 모델의 경량화 및 다양한 style 학습을 할 수 있게 개량한 것 또한 좋은 시도이면서 훌륭한 결과를 보이고 있다. 
 
+## Reference
+
+* [https://arxiv.org/abs/1904.02296](https://arxiv.org/abs/1904.02296)
+* [https://github.com/xinyuanc91/Gated-GAN/blob/master/models/multistyle\_architectures.lua](https://github.com/xinyuanc91/Gated-GAN/blob/master/models/multistyle_architectures.lua)
+* [https://github.com/colemiller94/gatedgan](https://github.com/colemiller94/gatedgan)
+
