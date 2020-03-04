@@ -2,7 +2,7 @@
 description: QAdversarial Gated Networks for Multi-Collection Style Transfer
 ---
 
-# 작성중 \(2019\) Gated-GAN
+# \(2019\) Gated-GAN
 
 ## 1. Introduction
 
@@ -86,4 +86,8 @@ Gated GAN의 큰 장점 중 하나인 단일 모델 사용이 아래 그림에�
 ![](../../.gitbook/assets/screenshot-from-2020-03-04-16-43-07.png)
 
 Cycle GAN과의 비교에서도 좋은 결과를 보여준다. 동일 style을 적용하여 생성된 이미지를 비교하면 gated GAN이 생성한 이미지가 전체적인 색감이 실제 artist style에 더 가까운 것을 확인 할 수 있다.
+
+### 3.3. Conclusion
+
+전반적으로 기존 연구들의 좋은 점을 잘 합쳐 학습 안정화를 잘 해내었다. Transformer module을 추가하여 모델의 경량화 및 다양한 style 학습을 할 수 있게 개량한 것 또한 좋은 시도이면서 훌륭한 결과를 보이고 있다. 
 
