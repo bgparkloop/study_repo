@@ -1,5 +1,5 @@
 ---
-description: Adversarial Gated Networks for Multi-Collection Style Transfer
+description: QAdversarial Gated Networks for Multi-Collection Style Transfer
 ---
 
 # 작성중 \(2019\) Gated-GAN
@@ -56,4 +56,18 @@ Multi style 학습 시 발생하는 overlaid-gradient problem으로 인해 학�
 생성된 이미지의 변화가 자연스럽도록 변화에 대한 loss를 추가하여 smooth하게 도와준다.
 
 ## 3. Experimental Results & Conclusion
+
+### 3.1. Quantitative Analysis
+
+FID라는 score를 통해 생성된 이미지의 퀄리티를 측정하였다. FID 값은 낮을수록 좋은 이미지이며, Gated GAN은 CycleGAN과 비교하여 거의 유사하거나 좀 더 좋은 퀄리티를 보여준다.
+
+![](../../.gitbook/assets/screenshot-from-2020-03-04-16-33-48.png)
+
+Gated GAN의 큰 장점 중 하나인 단일 모델 사용이 아래 그림에서 나타난다. 같은 수의 Style을 학습할 경우, Cycle GAN에 비해 parameter수가 현저히 낮은 것을 확인 할 수 있다.
+
+![](../../.gitbook/assets/screenshot-from-2020-03-04-16-35-07.png)
+
+### 3.2. Qualitative Analysis
+
+
 
