@@ -22,7 +22,7 @@
 * [Deep Learning](deep-learning/deep-learning/README.md)
   * [Deep Learning: Types of Convolution Layer](deep-learning/deep-learning/deep-learning-types-of-convolution-layer.md)
   * [Deep Learning: Image Augmentation](deep-learning/deep-learning/untitled.md)
-  * [\(작성중\) Deep Learning: Style Learning](deep-learning/deep-learning/deep-learning-style-learning.md)
+  * [Deep Learning: Style Learning](deep-learning/deep-learning/deep-learning-style-learning.md)
   * [Deep Learning: Introduction to Video Classification with CNN](deep-learning/deep-learning/deep-learning-introduction-to-video-classification-with-cnn.md)
 * [Metric Learning Introduction](deep-learning/metric-learning-introduction.md)
 * [Object Detection: Tensorflow API 사용법](deep-learning/object-detection-tensorflow-api.md)

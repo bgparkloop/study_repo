@@ -1,4 +1,4 @@
-# \(작성중\) Deep Learning: Style Learning
+# Deep Learning: Style Learning
 
 ## 1. Introduction
 
@@ -61,6 +61,10 @@ Vanilla GAN에서 Style에 대한 latent space를 만드는 network를 따로 �
 Gated GAN에서는 Discriminator에서 Real/Fake를 분류하는 기존의 GAN 부분과 Auxiliary Classifier를 두어 Style 종류를 맞추는 2가지 output으로 나뉜다. LabelGAN처럼 이 2부분을 합치는 경우도 있지만 이렇게하면 Overlaid-gradient problem이 발생해 학습에 안좋은 영향을 주게된다. 아래 그림은 gated GAN을 학습하여 artist의 style대로 input 이미지에 적용시킨 예이다. 단일 모델로 다양한 style을 학습할 수 있음이 증명되는 것 같다.
 
 ![](../../.gitbook/assets/screenshot-from-2020-03-03-18-59-33.png)
+
+## 3. Conclusion
+
+전통적인 방법을 제외하면 딥러닝으로 Style Learning을 하는 방식은 일반 Neural network와 GAN을 이용한 방식이 있다. 전자보다는 GAN의 방식이 학습 및 범용성에 있어서는 더 좋고 실제로도 많이 사용되고 있다. Gated GAN과 같이 단일 모델에서 multi style의 학습이 가능해짐으로써 실제 task들에 사용하기 더욱 쉬워지게 되었다. 좀 더 학습의 정교함과 1024x1024의 HD 이미지 이상을 얻게될 수 있게 변화하면 훨씬 유용하지 않을까 싶다.
 
 ## References
 
