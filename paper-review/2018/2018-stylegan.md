@@ -2,7 +2,7 @@
 description: A Style-Based Generator Architecture for Generative Adversarial Networks
 ---
 
-# 작성중 \(2018\) StyleGAN
+# \(2018\) StyleGAN
 
 ## 1. Introduction
 
@@ -28,15 +28,25 @@ Up/Down sampling 과정에서 기존 GAN에서는 Pooling 방식을 이용하였
 
 ## 3. Experimental Results & Conclusion
 
-### 3.1. asdasd
+### 3.1. Style Mixing
+
+![](../../.gitbook/assets/screenshot-from-2020-03-03-18-53-37.png)
+
+논문에서는 mixing regularization에서 소개된 2개의 random latent code로 학습된 source A, B를 어느 scale에서 합성하는지에 따라 다양한 style을 연출할 수 있다고 소개한다. 그림에서 살펴보면, Coarse한 style변화는 layer 4 ~ 8에서 합성한 이미지이다. 포즈나 얼굴형과 같은 큰 단위의 변화가 합성된다. 두 번째로 middle style의 변화는 16에서 32의 layer에서 합성되며, 얼굴 특징, 헤어스타일 등이 대표적이다. 마지막으로 fine style 변화는 그 외 layer에서 이루어지며, 머리색상과 같이 세부적인 사항이 주가 된다.
 
 ### 3.2. Stochastic Variation
 
 ![](../../.gitbook/assets/screenshot-from-2020-03-04-14-48-02.png)
 
-dfdf
+Stochastic variation의 효과는 위 그림처럼 나타난다. \(a\)처럼 생성된 이미지에서 \(b\)처럼 같은 부분을 보았을 때, 머리카락의 생김새가 모두 다름을 알 수 있다. 실제로 \(c\)처럼 생성되는 이미지들의 변화를 지켜보면 fine한 부분이 noise에 의해 변화가 있는 것을 볼 수 있다. 이처럼 noise를 추가하는 것이 stochastic한 변화를 주는데 도움을 준다.
 
 ![](../../.gitbook/assets/screenshot-from-2020-03-03-18-54-04.png)
 
+위 그림을 보면 \(a\)는 모든 layer에서 noise를 준 것이며, \(b\)는 모든 layer에 noise 추가가 없는 것이다. \(c\)는 fine style을 담당하는 layer에만, \(d\)는 coarse style을 담당하는 layer에만 준 것이다. 잘 살펴보면 noise를 주지 않았을 때보다 noise를 준 것이 훨씬 정교한 이미지를 생성하며, 더 다양한 이미지를 생성한다.
 
+### 3.3. Result Images
+
+![](../../.gitbook/assets/screenshot-from-2020-03-04-15-14-32.png)
+
+LSUN dataset에 대해 학습하여 생성한 이미지들이다. 다양한 style이 적용되어 이미지가 만들어지는 것을 확인가능하다. 논문에서 따로 제안한 metric인 Path length와 Linear separability가 있는데 이는 생략한다.
 
