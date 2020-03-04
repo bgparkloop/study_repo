@@ -58,7 +58,7 @@ Vanilla GAN에서 Style에 대한 latent space를 만드는 network를 따로 �
 
 ![](../../.gitbook/assets/screenshot-from-2020-03-03-18-59-41.png)
 
-Gated GAN에서는 Discriminator에서 Real/Fake를 분류하는 기존의 GAN 부분과 Auxiliary Classifier를 두어 Style 종류를 맞추는 2가지 output으로 나뉜다. LabelGAN처럼 이 2부분을 합치는 경우도 있지만 이렇게하면 Overlaid-gradient problem이 발생해 학습에 안좋은 영향을 주게된다. 아래 그림은 gated GAN을 학습하여 artist의 style대로 input 이미지에 적용시킨 예이다. 단일 모델로 다양한 style을 학습할 수 있음이 증명되는 것 같다.
+Gated GAN에서는 Discriminator에서 Real/Fake를 분류하는 기존의 GAN 부분과 Auxiliary Classifier를 두어 Style 종류를 맞추는 2가지 output으로 나뉜다. LabelGAN처럼 이 두 부분을 합치는 경우도 있지만 이렇게하면 Overlaid-gradient problem이 발생해 학습에 안좋은 영향을 주게된다. 아래 그림은 gated GAN을 학습하여 artist의 style대로 input 이미지에 적용시킨 예이다. 단일 모델로 다양한 style을 학습할 수 있음이 증명되는 것 같다.
 
 ![](../../.gitbook/assets/screenshot-from-2020-03-03-18-59-33.png)
 
