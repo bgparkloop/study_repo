@@ -12,9 +12,13 @@ Gatys가 제안한 Neural style transfer learning처럼 content와 style 이미�
 * Gate module을 이용하여 input과 output 사이에의 consistency를 없애 auto-encoder형태에서 탈피하여 mode collapse를 회피함
 * Real/Fake의 기존 GAN부분과 Auxiliary classifier를 두어 overlaid-gradient problem 회피
 
-주석\) mode collapse : random input이 다양한 변화를 주는 output을 생성하지 못해 GAN을 통해 생성한 output 이미지가 동일한 형태가 나오는 것을 의
+주석\) mode collapse : random input이 다양한 변화를 주는 output을 생성하지 못해 GAN을 통해 생성한 output 이미지가 동일한 형태가 나오는 것을 의미
 
 ## 2. Methods
+
+![](../.gitbook/assets/screenshot-from-2020-03-03-18-59-41.png)
+
+
 
 
 
