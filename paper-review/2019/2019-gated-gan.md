@@ -69,5 +69,21 @@ Gated GAN의 큰 장점 중 하나인 단일 모델 사용이 아래 그림에�
 
 ### 3.2. Qualitative Analysis
 
+**3.2.1. Texture synthesis**
 
+제안된 모델을 이용하여 Texture를 학습하여 생성하는 것을 보여준다. 가장 왼쪽의 그림이 학습을 위한 texture 이미지이며, input으로는 random noise를 사용했다. 생성된 texture 이미지들은 실제 texture 이미지들의 주요 특징을 잘 가져와 만들어진 것을 확인 할 수 있다.
+
+![](../../.gitbook/assets/screenshot-from-2020-03-04-16-40-07.png)
+
+**3.2.2. Style transfer**
+
+![](../../.gitbook/assets/screenshot-from-2020-03-04-16-42-27.png)
+
+실제 사진을 artist style을 입혀 변형한 예이다. Gayts의 Neural style transfer learning과 비교하여 좋은 결과를 보인다. 특히 Ukiyo-e style을 보면, 하늘부분에 불필요한 texture들이 없고, 색감 또한 기존 style을 잘 구현한 것을 확인 할 수 있다.
+
+**3.2.3. Model comparison**
+
+![](../../.gitbook/assets/screenshot-from-2020-03-04-16-43-07.png)
+
+Cycle GAN과의 비교에서도 좋은 결과를 보여준다. 동일 style을 적용하여 생성된 이미지를 비교하면 gated GAN이 생성한 이미지가 전체적인 색감이 실제 artist style에 더 가까운 것을 확인 할 수 있다.
 
