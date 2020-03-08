@@ -25,5 +25,7 @@ Django는 MVC 패턴 기반 MVT로 동작
 
 ### 장고 설치
 
+ Python 사용 가능 환경에서 pip install Django 로 설치.
+
 
 
