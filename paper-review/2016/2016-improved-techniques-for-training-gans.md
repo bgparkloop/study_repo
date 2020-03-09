@@ -20,25 +20,30 @@ $$
 
 ### 2.2. Minibatch discrimination
 
-ㅁㅁㄴㅇㅁㄴㅇ
+기존의 mini-batch 방식의 학습은 특히, GAN에서 discriminator가 단 방향의 잘못된 gradient descent를 할 가능성이 높다. 이렇게 되면 generator는 점점 학습하고자 하는 분포와 멀어지고 discriminator도 계속해서 잘못된 방향으로 학습한다. 문제는 mini-batch안에 있는 input을 discriminator가 독립적으로 처리하면서 발생하는데, 논문에서는 mini-batch안에 데이터들끼리의 관계성을 계산하여 학습식에 추가하였다. 관계성이라는 특성이 추가되어 input간의 차이를 좀 더 잘 알게되어 올바른 방향의 gradient를 학습하는데 도움을 준다.
 
 ### 2.3. Historical averaging
 
-asdasdasda
+generator, discriminator에 아래와 같은 term을 추가하여 학습 동안 급격한 변화로 잘못된 방향의 학습이 진행되지 않게 해줌. theta는 각 모델의 파라미터이며, t는 현재 상태에서의 학습 epoch 또는 iteration.
+
+$$
+|| \theta-\frac{1}{t} \sum_{i=1}^t \theta[i] ||
+$$
 
 ### 2.4. One-sided label smoothing
 
-asfasdfasf
+학습 시 label을 기존의 0, 1처럼 딱 떨어지는 숫자가 아닌, 0.1, 0.9와 같이 smoothing된 label을 이용함. GAN과 같이 학습이 불안정한 모델에서는 이와 같은 방식이 완전한 정답을 맞추는게 아니어서 안정성을 높여줌.
 
 ### 2.5. Virtual batch normalization
 
-asdfasfdasdf
-
-
+기존의 mini-batch로 학습하는 것이 아닌 고정된 reference batch를 사용해서 normalization을 시도함. 이렇게 하는 이유는 기존의 Batchnormalization에서는 input x가 같은 minibatch안에 있는 x'와 같은 다른 input에 종속적이게 되는 문제를 해결하기 위함임.
 
 ## 3. Experiment & Analysis
+
+
 
 ## References
 
 * [https://arxiv.org/pdf/1606.03498.pdf](https://arxiv.org/pdf/1606.03498.pdf)
+* [https://github.com/yjucho1/articles/blob/master/fromGANtoWGAN/readme.md\#improved-gan-training](https://github.com/yjucho1/articles/blob/master/fromGANtoWGAN/readme.md#improved-gan-training)
 
