@@ -1,4 +1,4 @@
-# 작성중 \(2016\) Improved Techniques for Training GANs
+# \(2016\) Improved Techniques for Training GANs
 
 ## 1. Introduction
 
