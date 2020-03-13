@@ -64,5 +64,7 @@ IP만 할 경우 runserver 127.0.0.1
 python manage.py createsuperuser
 ```
 
+* username, email, password 등록 후 아래의 사이트에서 확인 가능 
 * http://IP:PORT/admin으로 접속
-* 
+* 기존 미리 정의된 user와 groups 테이블이 보
+
