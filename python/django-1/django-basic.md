@@ -66,5 +66,152 @@ python manage.py createsuperuser
 
 * username, email, password 등록 후 아래의 사이트에서 확인 가능 
 * http://IP:PORT/admin으로 접속
-* 기존 미리 정의된 user와 groups 테이블이 보
+* 기존 미리 정의된 user와 groups 테이블이 보기
+
+### Model 개발
+
+1. models.py에서 DB를 정의해준다.
+
+```text
+from django.db import models
+
+# Create your models here.
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+
+    def __str__(self):
+        return self.question_text
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.choice_text
+```
+
+2. admin.py에 정의한 데이터베이스 테이블을 반영
+
+```text
+from django.contrib import admin
+from polls.models import Question, Choice
+
+# Register your models here.
+admin.site.register(Question)
+admin.site.register(Choice)
+```
+
+3. 데이터베이스 변경사항 반영
+
+```text
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### 애플리케이션 개발\(View & Template\)
+
+1. URLconf 코딩 \(아래와 같이 필요한 경로에 따라 추가\)
+
+```text
+from django.contrib import admin
+from django.urls import path
+from polls import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('polls/', views.index, name='index'),
+    path('polls/<int:question_id>/', views.detail, name='detail'),
+    path('polls/<int:question_id>/results/', views.results, name='results'),
+    path('polls/<int:question_id>/vote/', views.vote, name='vote'),
+]
+```
+
+2.html template 작성
+
+```text
+## index.html
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+    <li><a href="/polls/{{question.id}}/">{{question.question_text}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+
+## detail.html
+<h1>{{question.question_text}}</h1>
+
+{% if error_message %}<p><strong>{{error_message}}</strong></p>{% endif %}
+
+<form action="{% url 'polls:vote' question.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in question.choice_set.all %}
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{choice.id}}"/>
+        <label for="choice{{ forloop.counter }}">{{choice.choice_text}}</label><br/>
+    {% endfor %}
+<input type="submit" value="Vote" />
+</form>
+
+
+## results.html
+<h1>{{ question.question_text }}</h1>
+
+<ul>
+    {% for choice in question.choice_set.all %}
+        <li>{{ choice.choice_text }} - {{ choice.votes }} vote{{choice.votes|pluralize }}</li>
+    {% endfor %}    
+</ul>
+
+<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+```
+
+3. views.py 업데이트
+
+```text
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from polls.models import Choice, Question
+
+
+# Create your views here.
+def index(request):
+    latest_question_list = Question.objects.all().order_by('-pub_date')[:5]
+    context = {'latest_question_list': latest_question_list}
+    return render(request, 'polls/index.html', context)
+
+def detail(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    return render(request, 'polls/detail.html', {'question': question})
+
+def vote(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+
+    try:
+        selected_choice = question.choice_set.get(pk=request.POST['choice'])
+    except (KeyError, Choice.DoesNotExist):
+        return render(request, 'polls/detail.html', {
+            'question': question,
+            'error_message': "You didn't select a choice.",
+        })
+    else:
+        selected_choice.votes += 1
+        selected_choice.save()
+        # POST 데이터 정상처리하면 리다이렉션
+        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+def results(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    return render(request, 'polls/results.html', {'question': question})
+```
+
+4. IP:PORT/admin에서 데이터 추가하기
+
+* 코드 상에 추가된 질문과 답변 목록은 데이터베이스에저장이 안되있으므로 임의로 입력하여야함.
+* 입력하면 IP:PORT/polls로 접속하면 문답 기능을 확인 가
 
