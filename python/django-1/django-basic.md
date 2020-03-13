@@ -23,9 +23,46 @@ Django는 MVC 패턴 기반 MVT로 동작
 | 언어 지원 | 다국어 지원. |
 | 개발 환경 | 테스트용 웹 서버 등 개발에 도움되는 다양한 기능 제공. 또한, 소스 파일의 변경사항을 바로바로 반영하여 웹 서버를 다시 시작하지 않아도 됨. |
 
-### 장고 설치
+### 장고 기본 세
 
- Python 사용 가능 환경에서 pip install Django 로 설치.
+1. Python 사용 가능 환경에서 pip install Django 로 설치.
 
+2. 프로젝트 생성을 위해 다음과 같은 명령어 실행 \(project\_name 부분에 프로젝트 이름을 넣으면 생성\)
 
+```text
+django-admin startproject project_name
+```
 
+3. 웹 애플리케이션에서 동작할 애플리케이션 생성을 위해 다음과 같은 명령어 실행. 실행 전 프로젝트 폴더로 이동.\(위의 project\_name 폴더\)
+
+```text
+python manage.py startapp app_name
+```
+
+4. settings.py를 적절하게 조정 후, 아래와 같은 명령어로 데이터베이스 기본 설정 진행. \(기본 테이블 생성을 진행함\)
+
+```text
+python manage.py migrate
+```
+
+5. 웹 서버를 실행하여 잘 동작하는지 확인
+
+```text
+python manage.py runserver [IP][PORT]
+IP : 지정하지 않으면 기본 주소 127.0.0.1
+PORT : 지정하지 않으면 기본 포트 8888
+PORT만 할 경우 runserver 8888
+IP만 할 경우 runserver 127.0.0.1
+둘다 할 경우, IP:PORT
+```
+
+6. 테이블이 정상적으로 생성됬는지 Admin 페이지에서 확인하기
+
+* 관리자\(슈퍼유저\) 생성하기
+
+```text
+python manage.py createsuperuser
+```
+
+* http://IP:PORT/admin으로 접속
+* 
