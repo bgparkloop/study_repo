@@ -68,6 +68,7 @@
 * [Django 정리](python/django-1/README.md)
   * [Web Basic](python/django-1/web-basic.md)
   * [Django Basic](python/django-1/django-basic.md)
+  * [Django DB \(Admin 관련\)](python/django-1/django-db-admin.md)
 
 ## \[Side Projects\]
 
