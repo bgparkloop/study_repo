@@ -6,7 +6,7 @@
 
 * [2019](paper-review/2019/README.md)
   * [\(2019\) Data augmentation for Pathology](paper-review/2019/2019-data-augmentation-for-pathology.md)
-  * [\(작성중\) \(2019\) CNN for Action Detection and Segmentation in Videos](paper-review/2019/2019-cnn-for-action-detection-and-segmentation-in-videos.md)
+  * [\(2019\) CNN for Action Detection and Segmentation in Videos](paper-review/2019/2019-cnn-for-action-detection-and-segmentation-in-videos.md)
   * [\(2019\) Gated-GAN](paper-review/2019/2019-gated-gan.md)
 * [2018](paper-review/2018/README.md)
   * [\(2018\) StyleGAN](paper-review/2018/2018-stylegan.md)
