@@ -8,6 +8,7 @@
   * [\(2019\) Data augmentation for Pathology](paper-review/2019/2019-data-augmentation-for-pathology.md)
   * [\(2019\) CNN for Action Detection and Segmentation in Videos](paper-review/2019/2019-cnn-for-action-detection-and-segmentation-in-videos.md)
   * [\(2019\) Gated-GAN](paper-review/2019/2019-gated-gan.md)
+  * [\(2019\) An Efficient 3D CNN for Action/Object Segmentation in Video](paper-review/2019/2019-an-efficient-3d-cnn-for-action-object-segmentation-in-video.md)
 * [2018](paper-review/2018/README.md)
   * [\(2018\) StyleGAN](paper-review/2018/2018-stylegan.md)
   * [\(2018\) Classification is a Strong Baseline for Deep Metric Learning](paper-review/2018/2018-classification-is-a-strong-baseline-for-deep-metric-learning.md)
