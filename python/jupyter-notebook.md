@@ -45,5 +45,7 @@ result = subprocess.check_output('sha256sum {}'.format(path), shell=True)
 print(result)
 ```
 
+### Jupyter Lab에서 matplotlib 인터랙티브하게 사용하기
 
+* [https://stackoverflow.com/questions/50149562/jupyterlab-interactive-plot](https://stackoverflow.com/questions/50149562/jupyterlab-interactive-plot)
 
