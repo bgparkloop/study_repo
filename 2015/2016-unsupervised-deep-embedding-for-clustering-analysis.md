@@ -50,11 +50,31 @@ $$
 
 ### 2.3. Optimization
 
-* asdf
+* SGD를 이용하여 Cluster centers와 DNN parameters를 학습함.
+* cluster assignment가 일정 %이하로 떨어지면 학습을 멈춘다.
+
+$$
+\frac{\partial L}{\partial z_i} = \frac{\alpha +1}{\alpha} \sum_j {(1  + \frac{ {|| z_i -\mu_j ||}^2 }{\alpha}  )}^{-1} \times(p_{ij}-q_{ij})(z_i - \mu_j)
+$$
+
+$$
+\frac{\partial L}{\partial \mu_i} = \frac{\alpha +1}{\alpha} \sum_i {(1  + \frac{ {|| z_i -\mu_j ||}^2 }{\alpha}  )}^{-1} \times(p_{ij}-q_{ij})(z_i - \mu_j)
+$$
 
 ### 2.4. Parameter Initialization
 
-* asdadsa
+![](../.gitbook/assets/screenshot-from-2020-04-03-14-48-18.png)
+
+* SAE \(Stacked Auto-Encoder\)를 이용하여 초기화
+* SAE의 Encoder부분만 차출하여 DEC의 모델로 사용
+* 전체 학습 Flow
+  * DEC network로 data space를 X에서 Z로 embedding
+  * Z를 K-means로 centroids 계산 \(u\_j\)
+  * z\_i, u\_j로 q\_ij계산
+  * p\_ij 계산
+  * KL divergence Loss 계산
+  * SGD로 network update
+  * 수렴할 때까지 반
 
 ## 3. Results & Conclusion
 
@@ -62,6 +82,7 @@ $$
 
 * [https://leedakyeong.tistory.com/entry/%EB%85%BC%EB%AC%B8Unsupervised-Deep-Embedding-for-Clustering-AnalysisDEC](https://leedakyeong.tistory.com/entry/%EB%85%BC%EB%AC%B8Unsupervised-Deep-Embedding-for-Clustering-AnalysisDEC)
 * [https://arxiv.org/pdf/1511.06335.pdf](https://arxiv.org/pdf/1511.06335.pdf)
+* [https://excelsior-cjh.tistory.com/187](https://excelsior-cjh.tistory.com/187)
 
 
 
