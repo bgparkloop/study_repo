@@ -4,7 +4,7 @@ description: >-
   Segmentation in Videos
 ---
 
-# \(2019\) CNN for Action Detection and Segmentation in Videos
+# \(2017\) CNN for Action Detection and Segmentation in Videos
 
 ## 1. Introduction
 
@@ -67,4 +67,8 @@ $$
 ![](../../.gitbook/assets/screenshot-from-2020-03-26-18-41-33.png)
 
 ![](../../.gitbook/assets/screenshot-from-2020-03-26-18-41-46.png)
+
+## References
+
+* [https://arxiv.org/abs/1712.01111](https://arxiv.org/abs/1712.01111)
 

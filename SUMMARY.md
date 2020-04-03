@@ -6,20 +6,20 @@
 
 * [2019](paper-review/2019/README.md)
   * [\(2019\) Data augmentation for Pathology](paper-review/2019/2019-data-augmentation-for-pathology.md)
-  * [\(2019\) CNN for Action Detection and Segmentation in Videos](paper-review/2019/2019-cnn-for-action-detection-and-segmentation-in-videos.md)
   * [\(2019\) Gated-GAN](paper-review/2019/2019-gated-gan.md)
   * [\(작성중\) \(2019\) An Efficient 3D CNN for Action/Object Segmentation in Video](paper-review/2019/2019-an-efficient-3d-cnn-for-action-object-segmentation-in-video.md)
 * [2018](paper-review/2018/README.md)
   * [\(2018\) StyleGAN](paper-review/2018/2018-stylegan.md)
   * [\(2018\) Classification is a Strong Baseline for Deep Metric Learning](paper-review/2018/2018-classification-is-a-strong-baseline-for-deep-metric-learning.md)
 * [2017](paper-review/2017/README.md)
+  * [\(2017\) CNN for Action Detection and Segmentation in Videos](paper-review/2017/2019-cnn-for-action-detection-and-segmentation-in-videos.md)
   * [\(2017\) RSNA Bone Age Ensemble Model](paper-review/2017/2017-rsna-bone-age-ensemble-model.md)
   * [\(2017\) No Fuss Distance Metric Learning using Proxies](paper-review/2017/2017-no-fuss-distance-metric-learning-using-proxies.md)
 * [2016](paper-review/2016/README.md)
   * [\(2016\) Improved Techniques for Training GANs](paper-review/2016/2016-improved-techniques-for-training-gans.md)
-  * [\(2016\) SSD: Single Shot MultiBox Detector](paper-review/2016/2016-ssd-single-shot-multibox-detector.md)
   * [\(2016\) Conditional Similarity Networks](paper-review/2016/2016-conditional-similarity-networks.md)
 * [2015](2015/README.md)
+  * [\(2015\) SSD: Single Shot MultiBox Detector](2015/2016-ssd-single-shot-multibox-detector.md)
   * [\(작성중\) \(2015\) Unsupervised Deep Embedding for Clustering Analysis](2015/2016-unsupervised-deep-embedding-for-clustering-analysis.md)
 
 ## \[MACHINE LEARNING\] <a id="deep-learning"></a>
