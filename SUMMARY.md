@@ -24,20 +24,20 @@
 
 ## \[MACHINE LEARNING\] <a id="deep-learning"></a>
 
-* [Deep Learning](deep-learning/deep-learning/README.md)
-  * [Deep Learning: Types of Convolution Layer](deep-learning/deep-learning/deep-learning-types-of-convolution-layer.md)
-  * [Deep Learning: Image Augmentation](deep-learning/deep-learning/untitled.md)
-  * [Deep Learning: Style Learning](deep-learning/deep-learning/deep-learning-style-learning.md)
-  * [Deep Learning: Introduction to Video Classification with CNN](deep-learning/deep-learning/deep-learning-introduction-to-video-classification-with-cnn.md)
-* [Metric Learning Introduction](deep-learning/metric-learning-introduction.md)
-* [Object Detection: Tensorflow API 사용법](deep-learning/object-detection-tensorflow-api.md)
-* [\(작성중\) Video Segmentation Introduction](deep-learning/video-segmentation-introduction.md)
-* [\(작성중\) Ensemble Learning](deep-learning/ensemble-learning.md)
 * [Introduction to Machine Learning](deep-learning/introduction-to-machine-learning/README.md)
   * [Introduction to Machine Learning \(1\)](deep-learning/introduction-to-machine-learning/introduction-to-machine-learning-1.md)
   * [Introduction to Machine Learning \(2\)](deep-learning/introduction-to-machine-learning/introduction-to-machine-learning-2.md)
   * [Introduction to Machine Learning \(3\)](deep-learning/introduction-to-machine-learning/introduction-to-machine-learning-3.md)
   * [Introduction to Machine Learning \(4\)](deep-learning/introduction-to-machine-learning/introduction-to-machine-learning-4.md)
+* [Deep Learning](deep-learning/deep-learning/README.md)
+  * [Object Detection: Tensorflow API 사용법](deep-learning/deep-learning/object-detection-tensorflow-api.md)
+  * [\(작성중\) Video Segmentation Introduction](deep-learning/deep-learning/video-segmentation-introduction.md)
+  * [Metric Learning Introduction](deep-learning/deep-learning/metric-learning-introduction.md)
+  * [Deep Learning: Types of Convolution Layer](deep-learning/deep-learning/deep-learning-types-of-convolution-layer.md)
+  * [Deep Learning: Image Augmentation](deep-learning/deep-learning/untitled.md)
+  * [Deep Learning: Style Learning](deep-learning/deep-learning/deep-learning-style-learning.md)
+  * [Deep Learning: Introduction to Video Classification with CNN](deep-learning/deep-learning/deep-learning-introduction-to-video-classification-with-cnn.md)
+* [\(작성중\) Ensemble Learning](deep-learning/ensemble-learning.md)
 
 ## \[COMPUTER VISION\]
 
