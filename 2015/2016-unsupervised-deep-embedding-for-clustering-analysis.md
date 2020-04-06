@@ -78,6 +78,43 @@ $$
 
 ## 3. Results & Conclusion
 
+### 3.1. Dataset
+
+* MNIST : hand-written digits
+* STL-10 : 1,300 examples for 10 classes
+* REUTERS : english word samples
+
+### 3.2. Experimental Results
+
+![](../.gitbook/assets/screenshot-from-2020-04-06-09-37-01.png)
+
+* SEC, LDGMI, K-means와 비교해서 뛰어난 성능을 보임.
+* class 수가 늘어나더라도 큰 성능 저하가 없
+
+![](../.gitbook/assets/screenshot-from-2020-04-06-09-37-06.png)
+
+![](../.gitbook/assets/screenshot-from-2020-04-06-09-51-39.png)
+
+* 데이터셋에서 가장 수량이 적은 class에 대해 r\_min 비율만큼 사용하고 가장 많은 것을 100% 사용하게하여 그 사이에는 linearly increased한 비율로 사용할 때 DEC가 다른 방법에 비해 robust함.
+* imbalanced dataset에 대해서도 강점이 있음을 확인 할 수 있음
+
+![](../.gitbook/assets/screenshot-from-2020-04-06-09-55-30.png)
+
+* Normalized Mutual Information \(NMI\)와 Generalizability 라는 metric을 통해 MNIST dataset에 cluster 수를 변화시켰을 때를 측정함
+* 아무래도 MNIST가 10개의 class를 갖다보니 9~10사이에서 최적값을 보임
+
+$$
+NMI(l,c) = \frac{I(l,c)}{\frac{1}{2} [ H(l) + H(c) ]}
+$$
+
+$$
+G = \frac{Loss_{train}}{Loss_{validation}}
+$$
+
+* Deep learning + K-means를 통해 clustering을 할 수 있다는 점에서 새로움
+* 기존 방법들에 비해 generalization이 잘되는 걸로 보아 deep learning의 강력한 feature 추출 능력이 도움이 많이 된듯함
+* K개로 cluster 숫자를 입력받아야 한다는 점이 기존의 clustering 방법들과 동일함. 이 점이 해결된다면 정말 좋을
+
 ## References
 
 * [https://leedakyeong.tistory.com/entry/%EB%85%BC%EB%AC%B8Unsupervised-Deep-Embedding-for-Clustering-AnalysisDEC](https://leedakyeong.tistory.com/entry/%EB%85%BC%EB%AC%B8Unsupervised-Deep-Embedding-for-Clustering-AnalysisDEC)
