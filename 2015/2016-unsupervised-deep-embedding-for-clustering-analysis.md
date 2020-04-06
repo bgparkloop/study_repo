@@ -112,6 +112,7 @@ G = \frac{Loss_{train}}{Loss_{validation}}
 $$
 
 * Deep learning + K-means를 통해 clustering을 할 수 있다는 점에서 새로움
+* soft assignment를 통해 가상의 label을 붙여주는게 흥미로움.
 * 기존 방법들에 비해 generalization이 잘되는 걸로 보아 deep learning의 강력한 feature 추출 능력이 도움이 많이 된듯함
 * K개로 cluster 숫자를 입력받아야 한다는 점이 기존의 clustering 방법들과 동일함. 이 점이 해결된다면 정말 좋을
 
