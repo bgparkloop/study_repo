@@ -12,7 +12,7 @@
 
 * local neighbourhood를 이용한 unsupervised clustering end-to-end deep learning 학습법 제안
 * Anchor Neighbourhood Discovery\(AND\) approach 제안
-* curriculum learning algorithm 제
+* curriculum learning algorithm 제안
 
 ## 2. Methods
 
