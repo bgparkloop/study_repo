@@ -10,6 +10,7 @@
   * [\(2019\) Gated-GAN](paper-review/2019/2019-gated-gan.md)
   * [\(작성중\) \(2019\) An Efficient 3D CNN for Action/Object Segmentation in Video](paper-review/2019/2019-an-efficient-3d-cnn-for-action-object-segmentation-in-video.md)
 * [2018](paper-review/2018/README.md)
+  * [\(2018\) Unsupervised Feature Learning via Non-Parametric Instance Discrimination](paper-review/2018/2018-unsupervised-feature-learning-via-non-parametric-instance-discrimination.md)
   * [\(2018\) StyleGAN](paper-review/2018/2018-stylegan.md)
   * [\(2018\) Classification is a Strong Baseline for Deep Metric Learning](paper-review/2018/2018-classification-is-a-strong-baseline-for-deep-metric-learning.md)
 * [2017](paper-review/2017/README.md)
