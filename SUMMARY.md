@@ -20,9 +20,9 @@
 * [2016](paper-review/2016/README.md)
   * [\(2016\) Improved Techniques for Training GANs](paper-review/2016/2016-improved-techniques-for-training-gans.md)
   * [\(2016\) Conditional Similarity Networks](paper-review/2016/2016-conditional-similarity-networks.md)
-* [2015](2015/README.md)
-  * [\(2015\) SSD: Single Shot MultiBox Detector](2015/2016-ssd-single-shot-multibox-detector.md)
-  * [\(2015\) Unsupervised Deep Embedding for Clustering Analysis](2015/2016-unsupervised-deep-embedding-for-clustering-analysis.md)
+* [2015](paper-review/2015/README.md)
+  * [\(2015\) SSD: Single Shot MultiBox Detector](paper-review/2015/2016-ssd-single-shot-multibox-detector.md)
+  * [\(2015\) Unsupervised Deep Embedding for Clustering Analysis](paper-review/2015/2016-unsupervised-deep-embedding-for-clustering-analysis.md)
 
 ## \[MACHINE LEARNING\] <a id="deep-learning"></a>
 

@@ -45,7 +45,7 @@ L=KL(P||Q) = \sum_i \sum_j p_{ij} log{\frac{ p_{ij} }{ q_{ij} }}
 $$
 
 $$
-p_{ij} = \frac{  q_{ij}^2 / f_{j}  }{  \sum_{j'} q_{ij'}^2 / f_{j'}  }, f_{j}=\sum_i q_{ij}
+p_{ij} = \frac{  q_{ij}^2 / f_{j}  }{  \sum_{j'} q_{ij'}^2 / f_{j'}  },\quad f_{j}=\sum_i q_{ij}
 $$
 
 ### 2.3. Optimization
@@ -63,7 +63,7 @@ $$
 
 ### 2.4. Parameter Initialization
 
-![](../.gitbook/assets/screenshot-from-2020-04-03-14-48-18.png)
+![](../../.gitbook/assets/screenshot-from-2020-04-03-14-48-18.png)
 
 * SAE \(Stacked Auto-Encoder\)를 이용하여 초기화
 * SAE의 Encoder부분만 차출하여 DEC의 모델로 사용
@@ -86,19 +86,19 @@ $$
 
 ### 3.2. Experimental Results
 
-![](../.gitbook/assets/screenshot-from-2020-04-06-09-37-01.png)
+![](../../.gitbook/assets/screenshot-from-2020-04-06-09-37-01.png)
 
 * SEC, LDGMI, K-means와 비교해서 뛰어난 성능을 보임.
 * class 수가 늘어나더라도 큰 성능 저하가 없
 
-![](../.gitbook/assets/screenshot-from-2020-04-06-09-37-06.png)
+![](../../.gitbook/assets/screenshot-from-2020-04-06-09-37-06.png)
 
-![](../.gitbook/assets/screenshot-from-2020-04-06-09-51-39.png)
+![](../../.gitbook/assets/screenshot-from-2020-04-06-09-51-39.png)
 
 * 데이터셋에서 가장 수량이 적은 class에 대해 r\_min 비율만큼 사용하고 가장 많은 것을 100% 사용하게하여 그 사이에는 linearly increased한 비율로 사용할 때 DEC가 다른 방법에 비해 robust함.
 * imbalanced dataset에 대해서도 강점이 있음을 확인 할 수 있음
 
-![](../.gitbook/assets/screenshot-from-2020-04-06-09-55-30.png)
+![](../../.gitbook/assets/screenshot-from-2020-04-06-09-55-30.png)
 
 * Normalized Mutual Information \(NMI\)와 Generalizability 라는 metric을 통해 MNIST dataset에 cluster 수를 변화시켰을 때를 측정함
 * 아무래도 MNIST가 10개의 class를 갖다보니 9~10사이에서 최적값을 보임
