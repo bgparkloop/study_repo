@@ -14,6 +14,7 @@
   * [\(2018\) StyleGAN](paper-review/2018/2018-stylegan.md)
   * [\(2018\) Classification is a Strong Baseline for Deep Metric Learning](paper-review/2018/2018-classification-is-a-strong-baseline-for-deep-metric-learning.md)
 * [2017](paper-review/2017/README.md)
+  * [\(2017\) Non-local Neural Networks](paper-review/2017/2017-non-local-neural-networks.md)
   * [\(2017\) CNN for Action Detection and Segmentation in Videos](paper-review/2017/2019-cnn-for-action-detection-and-segmentation-in-videos.md)
   * [\(2017\) RSNA Bone Age Ensemble Model](paper-review/2017/2017-rsna-bone-age-ensemble-model.md)
   * [\(2017\) No Fuss Distance Metric Learning using Proxies](paper-review/2017/2017-no-fuss-distance-metric-learning-using-proxies.md)
