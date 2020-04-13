@@ -5,6 +5,7 @@
 ## \[PAPER REVIEW\]
 
 * [2019](paper-review/2019/README.md)
+  * [\(2019\) Video Object Segmentation using Space-Time Memory Networks](paper-review/2019/2019-video-object-segmentation-using-space-time-memory-networks.md)
   * [\(2019\) Unsupervised Deep Learning by Neighbourhood Discovery](paper-review/2019/2019-unsupervised-deep-learning-by-neighbourhood-discovery.md)
   * [\(2019\) Data augmentation for Pathology](paper-review/2019/2019-data-augmentation-for-pathology.md)
   * [\(2019\) Gated-GAN](paper-review/2019/2019-gated-gan.md)
