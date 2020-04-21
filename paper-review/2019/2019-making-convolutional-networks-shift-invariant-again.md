@@ -1,4 +1,4 @@
-# \(2019\) Making Convolutional Networks Shift-Invariant Again
+# \(작성중\) \(2019\) Making Convolutional Networks Shift-Invariant Again
 
 ## 1. Introduction
 
