@@ -13,13 +13,13 @@ description: >-
 * 반면, Encoder-Decoder형식의 Segmentation과 같은 Bottom-up 방식은 pixel 단위의 분류를 통해 더욱 정교한 bbox 검출 가능. \(pixel 단위의 샘플 분류로 데이터도 더 적어도 됨. video annotation의 단점 줄임\)
 * 여기에 시간적 일관성을 고려하기 위해 3D convolution 기반의 T-CNN, ST-CNN을 제안함.
 
-![](../../.gitbook/assets/screenshot-from-2020-03-26-18-22-36.png)
+![](../../../.gitbook/assets/screenshot-from-2020-03-26-18-22-36.png)
 
 ## 2. Methods
 
 ### 2.1. T-CNN
 
-![](../../.gitbook/assets/screenshot-from-2020-03-26-18-22-58.png)
+![](../../../.gitbook/assets/screenshot-from-2020-03-26-18-22-58.png)
 
 * 3D convolution 기반으로 기존의 Channel X Height X Width에서 시간 정보\(Depth or Time or Frame\)을 추가하여 시간정보도 고려함.
 * 8 frame단위를 묶어 하나의 clip이라는 단위로 입력을 받으며, 이러한 처리는 GPU 효용성을 높여줌.
@@ -27,7 +27,7 @@ description: >-
 * 시간 일관성은 skip pooling layer를 두어 유지함.
 * ToI pooling의 Backpropagation은 un-pooling layer와 같이 max-pooling한 위치를 기억하여 이를 역추적하여 계산함.
 
-![](../../.gitbook/assets/screenshot-from-2020-03-26-18-22-51.png)
+![](../../../.gitbook/assets/screenshot-from-2020-03-26-18-22-51.png)
 
 * Anchor bbox 추출 시, K-means clustering을 사용하여 12개의 후보를 추출함.
 * Bbox는 GT와의 IoU가 0.7이상이거나, bbox 중 IoU가 가장 높은 것을 제외하고 제거함. 추가로, bbox의 행동점수가 threshold보다 낮을 경우도 제거함.
@@ -38,11 +38,11 @@ $$
 S=\frac{1}{m} \sum_{i=1}^m Actionness_i + \frac{1}{m-1} \sum_{j=1}^{m-1} Overlap_{j, j+1}
 $$
 
-![](../../.gitbook/assets/screenshot-from-2020-03-26-18-23-06.png)
+![](../../../.gitbook/assets/screenshot-from-2020-03-26-18-23-06.png)
 
 ### 2.2. ST-CNN
 
-![](../../.gitbook/assets/screenshot-from-2020-03-26-18-23-20.png)
+![](../../../.gitbook/assets/screenshot-from-2020-03-26-18-23-20.png)
 
 * T-CNN을 Encoder-Decoder 구조로 확장시켜 Segmentation task에 적용 가능하게 함.
 * un-pooling, deconvolution이 아닌 sub-pixel convolution을 통해 upsampling을 수행함.
@@ -51,7 +51,7 @@ $$
   * resolution은 같지만, depth가 3에서 1로 바뀌며 channel수가 늘어남\(1-&gt;8\)
   * 늘어난 channel정보를 reshape하여 resolution과 depth에 분산시킴\(논문에 등장하는 eq. 3, 4을 이용하여\)
 
-![](../../.gitbook/assets/screenshot-from-2020-03-26-18-34-06.png)
+![](../../../.gitbook/assets/screenshot-from-2020-03-26-18-34-06.png)
 
 ## 3. Results & Conclusion
 
@@ -62,11 +62,11 @@ $$
 * Titan X 1개 사용으로, 40 frame 비디오에 대해 T-CNN은 2.03초, ST-CNN은 0.7초로 ST-CNN이 3배 가량 빠름.
 * Video segmentation을 End-to-end + 시간 일관성을 고려한 점에서 좋은 approach인 것 같음. 쓸데없이 많은 과정을 거치지않고 필요한 연산만하여 parameter도 많이 크지 않을 것 같음.
 
-![](../../.gitbook/assets/screenshot-from-2020-03-26-18-42-04.png)
+![](../../../.gitbook/assets/screenshot-from-2020-03-26-18-42-04.png)
 
-![](../../.gitbook/assets/screenshot-from-2020-03-26-18-41-33.png)
+![](../../../.gitbook/assets/screenshot-from-2020-03-26-18-41-33.png)
 
-![](../../.gitbook/assets/screenshot-from-2020-03-26-18-41-46.png)
+![](../../../.gitbook/assets/screenshot-from-2020-03-26-18-41-46.png)
 
 ## References
 

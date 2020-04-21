@@ -71,7 +71,7 @@ $$
 
 ### 2.2. Non-local Block
 
-![](../../.gitbook/assets/screenshot-from-2020-04-13-14-46-57.png)
+![](../../../.gitbook/assets/screenshot-from-2020-04-13-14-46-57.png)
 
 $$
 \mathbf{z}_i=W_z \mathbf{y}_i + \mathbf{x}_i
@@ -104,7 +104,7 @@ $$
 
 **3.1.2. Results**
 
-![](../../.gitbook/assets/screenshot-from-2020-04-13-15-16-43.png)
+![](../../../.gitbook/assets/screenshot-from-2020-04-13-15-16-43.png)
 
 * \(a\)의 결과로 function f로는 dot-product가 가장 효과적인 것을 확인 가능
 * \(b\)의 결과로 어느 stage 쯤에 non-local block을 넣어야 효과적인지 알 수 있음
@@ -114,7 +114,7 @@ $$
 * \(f\)의 결과로 3D에도 NL을 삽입하면 일단 좋음
 * \(g\)의 결과로 입력값으로 더 긴 clip을 넣어도 NL을 통해 long-range dependency를 잘 가져감을 알 수 있
 
-![](../../.gitbook/assets/screenshot-from-2020-04-13-15-16-55.png)
+![](../../../.gitbook/assets/screenshot-from-2020-04-13-15-16-55.png)
 
 * 그 외 SOTA와도 비교했을 때, optical flow + audio정보를 더해야 NL을 삽입한 것과 유사한 결과를 보임
 * non-local means의 방식을 참고하여 deep learning에 적용한 것이 흥미로움

@@ -18,7 +18,7 @@ description: >-
 
 아래는 조직/염색법 마다 다른 pathology image.
 
-![](../../.gitbook/assets/screenshot-from-2020-02-10-11-23-36.png)
+![](../../../.gitbook/assets/screenshot-from-2020-02-10-11-23-36.png)
 
 ### Contributions:
 
@@ -72,7 +72,7 @@ description: >-
 
 ### 3.1. Stain Color Augmentation
 
-![](../../.gitbook/assets/screenshot-from-2020-02-10-11-38-46.png)
+![](../../../.gitbook/assets/screenshot-from-2020-02-10-11-38-46.png)
 
 * Basic
   * 90 degree rotations
@@ -94,7 +94,7 @@ description: >-
 
 ### 3.2. Stain Color Normalization
 
-![](../../.gitbook/assets/screenshot-from-2020-02-10-11-47-14.png)
+![](../../../.gitbook/assets/screenshot-from-2020-02-10-11-47-14.png)
 
 Trainset과 Testset 간의 Color variation을 줄이는 방법. 아래와 같은 방법들로 진행된다.
 
@@ -103,7 +103,7 @@ Trainset과 Testset 간의 Color variation을 줄이는 방법. 아래와 같은
 * LUT-based : Look Up Table에 Target WSI의 color 정보를 담아 Normalization을 수행.
 * Network-based : U-Net을 End-to-end으로 Color distribution을 변환하는 모델을 학습.
 
-![](../../.gitbook/assets/screenshot-from-2020-02-10-11-47-24.png)
+![](../../../.gitbook/assets/screenshot-from-2020-02-10-11-47-24.png)
 
 ## 4. Experimental Results & Conclusion
 
@@ -114,7 +114,7 @@ Trainset과 Testset 간의 Color variation을 줄이는 방법. 아래와 같은
 * Color Normalization 관점에서는 Network-basd가 가장 좋은 성능을 보였으며, 아무것도 하지 않은 것이 그 다음으로 좋았음.\(어정쩡한 Normalization 보다는 확실하게 Normalization을 해주어야 좋은 성능을 보이는 것 같음\)
 * 적절한 data augmentation은 적용하지 않는 것보다 noisy함을 줄여주고, overfitting과 generalization error를 줄여주는 효과가 있음.
 
-![](../../.gitbook/assets/screenshot-from-2020-02-10-11-48-30.png)
+![](../../../.gitbook/assets/screenshot-from-2020-02-10-11-48-30.png)
 
 Link : [https://arxiv.org/pdf/1902.06543.pdf](https://arxiv.org/pdf/1902.06543.pdf)
 

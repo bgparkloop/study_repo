@@ -9,7 +9,7 @@
 
 ## 2. Methods
 
-![](../../.gitbook/assets/2.PNG)
+![](../../../.gitbook/assets/2.PNG)
 
 ### 2.1. Non-parametric Softmax Classifier
 
@@ -63,14 +63,14 @@ $$
 J_{NCE}(\theta) = -E_{P_d} [\log h(i, \mathbf{v}^{(t-1)}) - \lambda|| \mathbf{v}_i^{(t)}-\mathbf{v}_i^{(t-1)}  ||_2^2] -m\cdot E_{P_n} [\log (1-h(i, \mathbf{v}'^{(t-1)}))]
 $$
 
-![](../../.gitbook/assets/undefined.PNG)
+![](../../../.gitbook/assets/undefined.PNG)
 
 ## 3. Results & Conclusion
 
 * 제안한 방법의 테스트는 학습한 모델로 추출한 trainset의 feature vector들로 SVM을 학습하고 testset의 feature vector를 분류함
 * k-nearest는 학습이 필요없어 그대로 진행
 
-![](../../.gitbook/assets/3.PNG)
+![](../../../.gitbook/assets/3.PNG)
 
 * 작은 크기의 feature vector로도 generalization이 잘됨
 * training과 testing에서의 objective\(similarity\)가 일관성 있음. 즉, 성능이 좋음

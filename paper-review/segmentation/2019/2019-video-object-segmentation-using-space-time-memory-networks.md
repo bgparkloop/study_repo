@@ -16,7 +16,7 @@
 
 ### 2.1. Space-Time Memory Network
 
-![](../../.gitbook/assets/screenshot-from-2020-04-14-14-49-38.png)
+![](../../../.gitbook/assets/screenshot-from-2020-04-14-14-49-38.png)
 
 * Memory Network 도입
   * Key - Value pair memory를 두어 현재 frame에서의 object를 다른 frame에서의 시공간에서 찾기 유용함
@@ -34,7 +34,7 @@
 
 ### 2.2. Space-time Memory Read
 
-![](../../.gitbook/assets/screenshot-from-2020-04-14-14-49-44.png)
+![](../../../.gitbook/assets/screenshot-from-2020-04-14-14-49-44.png)
 
 * Query와 Memory의 key값의 유사도를 먼저 측정하고 이를 이용하여 Memory의 value값에서 가장 유사한 특징들을 추출함
 * 추출된 특징들을 Query의 Value와 concat하여 최종 memory read를 진행
@@ -64,11 +64,11 @@
 
 ### 3.2. Results
 
-![](../../.gitbook/assets/screenshot-from-2020-04-14-15-03-55.png)
+![](../../../.gitbook/assets/screenshot-from-2020-04-14-15-03-55.png)
 
-![](../../.gitbook/assets/screenshot-from-2020-04-14-15-04-06.png)
+![](../../../.gitbook/assets/screenshot-from-2020-04-14-15-04-06.png)
 
-![](../../.gitbook/assets/screenshot-from-2020-04-14-15-04-11.png)
+![](../../../.gitbook/assets/screenshot-from-2020-04-14-15-04-11.png)
 
 * Occlusion과 Appearance changing에 상당히 강한 면모를 보임
 * Memory network + Non-local manner의 방법을 같이 사용한 것이 좋은 선택이었던 것 같음
