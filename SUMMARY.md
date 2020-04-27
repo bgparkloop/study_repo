@@ -42,7 +42,7 @@
     * [\(2018\) Numerical Coordinate Regression with Convolutional Neural Networks](paper-review/tricks/2018/2018-numerical-coordinate-regression-with-convolutional-neural-networks.md)
   * [2019](paper-review/tricks/2019/README.md)
     * [\(2019\) Data augmentation for Pathology](paper-review/tricks/2019/2019-data-augmentation-for-pathology.md)
-    * [\(작성중\) \(2019\) Making Convolutional Networks Shift-Invariant Again](paper-review/tricks/2019/2019-making-convolutional-networks-shift-invariant-again.md)
+    * [\(2019\) Making Convolutional Networks Shift-Invariant Again](paper-review/tricks/2019/2019-making-convolutional-networks-shift-invariant-again.md)
 
 ## \[MACHINE LEARNING\] <a id="deep-learning"></a>
 
