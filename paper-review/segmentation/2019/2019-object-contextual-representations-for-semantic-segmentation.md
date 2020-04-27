@@ -24,7 +24,8 @@ $$
 \mathbf{f}_k = \sum_{i \in \mathcal{I}} \tilde{m}_{ki} \mathbf{x}_i
 $$
 
-
+* Backbone feature \(pixels\)에 soft object regions의 값을 weighted sum한 것
+* 같은 soft object region의 pixel들의 가중치로 볼 수 있음
 
 ### Object contextual representations
 
@@ -32,7 +33,16 @@ $$
 w_{ik} = \frac{ e^{ \mathcal{K} (\mathbf{x}_i,\mathbf{f}_k) }  }{ \sum_{j=1}^K e^{  \mathcal{K} (\mathbf{x}_i ,\mathbf{f}_j) } }
 $$
 
+* Pixel과 object region에 대한 가중치를 별도의 transform function를 거친 후 서로 dot product한 것
+* 최종적인 Object region에 대한 contextual representation을 얻음
 
+### Augmented representations
+
+$$
+\mathbf{z}_i = g( [ {\mathbf{x}_i}^T {\mathbf{y}_i}^T  ]^T )
+$$
+
+* 얻어진 Object contextual representation과 pixel 사이의 관계를 다시 한 번 weighted sum하여 최종적인 output을 정의
 
 ## Results & Conclusion
 
