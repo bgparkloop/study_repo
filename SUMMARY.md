@@ -7,6 +7,7 @@
 * [\[Classification\]](paper-review/classification.md)
 * [\[Segmentation\]](paper-review/segmentation/README.md)
   * [2019](paper-review/segmentation/2019/README.md)
+    * [\(2019\) Object-Contextual Representations for Semantic Segmentation](paper-review/segmentation/2019/2019-object-contextual-representations-for-semantic-segmentation.md)
     * [\(작성중\) \(2019\) An Efficient 3D CNN for Action/Object Segmentation in Video](paper-review/segmentation/2019/2019-an-efficient-3d-cnn-for-action-object-segmentation-in-video.md)
     * [\(2019\) Video Object Segmentation using Space-Time Memory Networks](paper-review/segmentation/2019/2019-video-object-segmentation-using-space-time-memory-networks.md)
 * [\[Detection\]](paper-review/detection/README.md)
