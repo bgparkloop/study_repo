@@ -25,7 +25,7 @@ $$
 $$
 
 * Backbone feature \(pixels\)에 soft object regions의 값을 weighted sum한 것
-* 같은 soft object region의 pixel들의 가중치로 볼 수 있음
+* f\_k 는 k번째 object에 대한 representation으로써 Channel X Classes의 크기를 갖음\(Channel은 해당 class를 표현하는 vector\)
 
 ### Object contextual representations
 
@@ -35,14 +35,20 @@ $$
 
 * Pixel과 object region에 대한 가중치를 별도의 transform function를 거친 후 서로 dot product한 것
 * 최종적인 Object region에 대한 contextual representation을 얻음
+* i번째 pixel과 k번째 object간의 관계\(소속정도\)를 표현하기 때문에 contextual한 정보를 담
 
 ### Augmented representations
+
+$$
+\mathbf{y}_i = \rho( \sum_{k=1}^K w_{ik} \delta(\mathbf{f}_k) )
+$$
 
 $$
 \mathbf{z}_i = g( [ {\mathbf{x}_i}^T {\mathbf{y}_i}^T  ]^T )
 $$
 
-* 얻어진 Object contextual representation과 pixel 사이의 관계를 다시 한 번 weighted sum하여 최종적인 output을 정의
+* Pixel과 object간의 상관관계와 object의 representation을 weighted sum하여 object의 표현을 최종적으로 증강함\(self attention 정보\)
+* Pixel과 self attention정보를 concat하여 최종 output을 산출
 
 ## Results & Conclusion
 
