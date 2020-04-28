@@ -11,4 +11,5 @@ description: mainly Machine Learning and Deep Learning
 * [https://talkingaboutme.tistory.com/entry/DL-Meta-Learning-Learning-to-Learn-Fast](https://talkingaboutme.tistory.com/entry/DL-Meta-Learning-Learning-to-Learn-Fast)
 * [https://brunch.co.kr/@kakao-it/194](https://brunch.co.kr/@kakao-it/194)
 * [https://www.kakaobrain.com/blog/106](https://www.kakaobrain.com/blog/106)
+* pytorch @ symbol : last 2 dimensions matrix multiplication
 
