@@ -52,6 +52,18 @@ $$
 
 ## Results & Conclusion
 
+![](../../../.gitbook/assets/screenshot-from-2020-04-28-11-12-00.png)
+
+* Object region에 대해 loss를 계산하여 학습하면 성능이 오름\(아마 더 정확한 object region 영역을 미리 추정하기 때문인듯\)
+* Pixel region relation을 계산하는 방법을 DA, ACF 방법과 비교하여 제안한 방법이 더 좋음을 확인
+* Cityscapes, ADE20K, LIP, PASCAL-Context, COCO-Stuff 데이터셋에 대해 성능 검
+* Contextual representation을 추출하는 방식을 새롭게 제안하여 성능을 높인 점이 흥미로움
+* Encoder, Decoder 기반의 방식이 아니고 단순 bilinear upsampling에서 높은 성능을 보이는 것이 Pixel당 정확한 representation을 갖음을 확인시켜
+
+![](../../../.gitbook/assets/screenshot-from-2020-04-28-11-11-55.png)
+
+![](../../../.gitbook/assets/screenshot-from-2020-04-28-11-12-41.png)
+
 ## References
 
 * [https://arxiv.org/abs/1909.11065](https://arxiv.org/abs/1909.11065)
