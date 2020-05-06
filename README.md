@@ -12,4 +12,5 @@ description: mainly Machine Learning and Deep Learning
 * [https://brunch.co.kr/@kakao-it/194](https://brunch.co.kr/@kakao-it/194)
 * [https://www.kakaobrain.com/blog/106](https://www.kakaobrain.com/blog/106)
 * pytorch @ symbol : last 2 dimensions matrix multiplication
+* [https://app.gitbook.com/@leemdawoon/s/p-memo/](https://app.gitbook.com/@leemdawoon/s/p-memo/)
 
