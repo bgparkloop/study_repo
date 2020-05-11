@@ -13,4 +13,6 @@ description: mainly Machine Learning and Deep Learning
 * [https://www.kakaobrain.com/blog/106](https://www.kakaobrain.com/blog/106)
 * pytorch @ symbol : last 2 dimensions matrix multiplication
 * [https://app.gitbook.com/@leemdawoon/s/p-memo/](https://app.gitbook.com/@leemdawoon/s/p-memo/)
+* [https://lars76.github.io/neural-networks/object-detection/losses-for-segmentation/](https://lars76.github.io/neural-networks/object-detection/losses-for-segmentation/)
+* [https://blog.naver.com/PostView.nhn?blogId=sogangori&logNo=221087066947](https://blog.naver.com/PostView.nhn?blogId=sogangori&logNo=221087066947)
 

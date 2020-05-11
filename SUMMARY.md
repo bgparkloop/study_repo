@@ -1,6 +1,7 @@
 # Table of contents
 
 * [STUDY NOTES for EVERYTHING](README.md)
+* [MEMO](memo.md)
 
 ## \[PAPER REVIEW\]
 
