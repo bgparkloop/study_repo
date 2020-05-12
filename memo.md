@@ -14,5 +14,9 @@
 2. Image classification \(LSIL/HSIL/Carcinoma가 있다/없다, Train:성모, Test: 성모\)
 3. Image classification \(abnormal cell이 있다/없다, Train:성모, Test: 캄보디아\)
 4. Image classification \(LSIL/HSIL/Carcinoma가 있다/없다, Train:성모, Test: 캄보디아\)
-5. Validation \(앱 성능 및 몇가지 설문\)
+5. Validation \(앱 성능 및 몇가지 설문\)'
+
+
+
+[https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX\_%EB%AC%B8%EB%B2%95](https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95)
 
