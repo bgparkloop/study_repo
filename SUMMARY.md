@@ -2,6 +2,7 @@
 
 * [STUDY NOTES for EVERYTHING](README.md)
 * [MEMO](memo.md)
+* [ISSUES](issues.md)
 
 ## \[PAPER REVIEW\]
 
