@@ -40,6 +40,7 @@
 * [\[Domain Adaptation\]](paper-review/domain-adaptation/README.md)
   * [2016](paper-review/domain-adaptation/2016/README.md)
     * [작성중 \(2016\) Domain-Adversarial Training of Neural Networks](paper-review/domain-adaptation/2016/2016-domain-adversarial-training-of-neural-networks.md)
+* [\[GAN\]](paper-review/gan.md)
 * [\[Tricks\]](paper-review/tricks/README.md)
   * [2017](paper-review/tricks/2017/README.md)
     * [\(2017\) RSNA Bone Age Ensemble Model](paper-review/tricks/2017/2017-rsna-bone-age-ensemble-model.md)
