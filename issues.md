@@ -8,6 +8,10 @@
   * [https://m.blog.naver.com/PostView.nhn?blogId=atelierjpro&logNo=221281646302&proxyReferer=https:%2F%2Fwww.google.com%2F](https://m.blog.naver.com/PostView.nhn?blogId=atelierjpro&logNo=221281646302&proxyReferer=https:%2F%2Fwww.google.com%2F)
   * [https://waifulabs.com/blog/ax?fbclid=IwAR3U4ZzJei6tS8prt-hc21fF5-hBWAiWpRiPxmfQsU9oInStdBm6QVBN4ok](https://waifulabs.com/blog/ax?fbclid=IwAR3U4ZzJei6tS8prt-hc21fF5-hBWAiWpRiPxmfQsU9oInStdBm6QVBN4ok)
   * [https://dena.com/intl/anime-generation/](https://dena.com/intl/anime-generation/)
+* GAN 활용법
+  * text의 semantic 정보로 image를 형성\(ex - DCGAN\)
+  * 생성된 이미지에서부터 style정보 추출\(DCGAN\)
+  * image to animation
 
 
 
